@@ -1,0 +1,227 @@
+import { useParams, Link } from "react-router-dom";
+import { projects } from "../data/portfolio";
+import { useLang } from "../lib/lang";
+import { ui } from "../data/ui";
+import { categoryConfig } from "../components/Experience";
+import { ArrowLeft, ExternalLink } from "lucide-react";
+
+export default function ProjectPage() {
+  const { slug } = useParams<{ slug: string }>();
+  const { lang } = useLang();
+
+  const project = projects.find((p) => p.slug === slug);
+
+  if (!project) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <p className="text-slate-400 text-lg">{ui.projectPage.notFound[lang]}</p>
+          <Link to="/" className="mt-4 inline-block text-indigo-400 hover:text-indigo-300 transition-colors">
+            {ui.projectPage.back[lang]}
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  const cat = categoryConfig(project.category);
+  const content = project.content;
+  const others = projects
+    .filter((p) => p.slug !== slug)
+    .sort((a, b) => (b.highlight ? 1 : 0) - (a.highlight ? 1 : 0))
+    .slice(0, 3);
+
+  return (
+    <main className="pt-24 pb-24 px-6">
+      <div className="max-w-5xl mx-auto">
+
+        {/* Back link */}
+        <Link
+          to="/#projects"
+          className="inline-flex items-center gap-2 text-slate-400 hover:text-indigo-300 text-sm transition-colors mb-10"
+        >
+          <ArrowLeft size={14} />
+          {ui.projectPage.back[lang]}
+        </Link>
+
+        {/* Header */}
+        <div className="mb-14">
+          <div className="flex items-center gap-3 mb-4 flex-wrap">
+            {cat && (
+              <span className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-md border text-xs font-medium ${cat.badge}`}>
+                {cat.icon}{cat.label}
+              </span>
+            )}
+            <span className="text-slate-500 text-xs">{project.date}</span>
+            <span className="text-slate-500 text-xs">· {project.company}</span>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
+            {project.title[lang]}
+          </h1>
+          <p className="text-slate-300 text-lg leading-relaxed max-w-3xl">
+            {project.description[lang]}
+          </p>
+          <div className="flex flex-wrap gap-2 mt-6">
+            {project.tech.map((t) => (
+              <span key={t} className="px-2.5 py-1 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-medium">
+                {t}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-[1fr_280px] gap-12 items-start">
+
+          {/* Content */}
+          <div className="space-y-12">
+            {/* Context */}
+            <ContentSection title={ui.projectPage.context[lang]}>
+              <p className="text-slate-300 leading-relaxed">{content.context[lang]}</p>
+            </ContentSection>
+
+            {/* Approach */}
+            <ContentSection title={ui.projectPage.approach[lang]}>
+              <ul className="space-y-3">
+                {content.approach[lang].map((item, i) => (
+                  <li key={i} className="flex gap-3 text-slate-300">
+                    <span className="text-indigo-400 mt-1 flex-shrink-0">›</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </ContentSection>
+
+            {/* Solution */}
+            <ContentSection title={ui.projectPage.solution[lang]}>
+              <p className="text-slate-300 leading-relaxed">{content.solution[lang]}</p>
+            </ContentSection>
+
+            {/* Key outcome — callout */}
+            <div className="rounded-2xl border border-indigo-500/30 bg-indigo-500/5 p-6">
+              <p className="text-indigo-300 text-xs font-semibold uppercase tracking-widest mb-3">
+                {ui.projectPage.keyOutcome[lang]}
+              </p>
+              <p className="text-white text-base leading-relaxed font-medium">
+                {content.keyOutcome[lang]}
+              </p>
+            </div>
+
+            {/* Applications */}
+            {content.applications && (
+              <ContentSection title={ui.projectPage.applications[lang]}>
+                <ul className="space-y-2">
+                  {content.applications[lang].map((app, i) => (
+                    <li key={i} className="flex gap-3 text-slate-300 text-sm">
+                      <span className="text-indigo-400 mt-0.5 flex-shrink-0">›</span>
+                      <span>{app}</span>
+                    </li>
+                  ))}
+                </ul>
+              </ContentSection>
+            )}
+
+            {/* External link */}
+            {content.link && (
+              <a
+                href={content.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-indigo-300 hover:text-indigo-200 font-medium transition-colors"
+              >
+                <ExternalLink size={15} />
+                {lang === "fr" ? "Visiter le projet →" : "Visit project →"}
+              </a>
+            )}
+          </div>
+
+          {/* Sidebar */}
+          <div className="md:sticky md:top-28 bg-slate-800/50 border border-slate-700 rounded-2xl p-6 space-y-5">
+            <h3 className="text-white font-semibold text-sm">{ui.projectPage.details[lang]}</h3>
+
+            <div className="space-y-3 text-sm">
+              <DetailRow label={ui.projectPage.type[lang]} value={project.type[lang]} />
+              <DetailRow label={ui.projectPage.date[lang]} value={project.date} />
+              <DetailRow label={ui.projectPage.role[lang]} value={project.role[lang]} />
+            </div>
+
+            <div className="border-t border-slate-700/60 pt-4">
+              <p className="text-slate-500 text-xs uppercase tracking-wider mb-3">{ui.projectPage.stack[lang]}</p>
+              <div className="flex flex-wrap gap-1.5">
+                {project.tech.map((t) => (
+                  <span key={t} className="px-2 py-0.5 rounded-md bg-slate-700/80 text-slate-300 text-xs">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors"
+              >
+                <ExternalLink size={13} /> GitHub
+              </a>
+            )}
+          </div>
+        </div>
+
+        {/* More projects */}
+        {others.length > 0 && (
+          <div className="mt-20 pt-12 border-t border-slate-800">
+            <div className="flex items-center justify-between mb-8">
+              <h2 className="text-xl font-bold text-white">{ui.projects.moreProjects[lang]}</h2>
+              <Link to="/#projects" className="text-sm text-indigo-400 hover:text-indigo-300 transition-colors">
+                {ui.projects.viewAll[lang]}
+              </Link>
+            </div>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+              {others.map((p) => (
+                <Link
+                  key={p.slug}
+                  to={`/projects/${p.slug}`}
+                  className="group bg-slate-800/50 border border-slate-700 rounded-2xl p-5 hover:border-indigo-500/40 hover:bg-slate-800/80 transition-all duration-300"
+                >
+                  <h3 className="text-white font-semibold text-sm mb-2 group-hover:text-indigo-200 transition-colors leading-snug">
+                    {p.title[lang]}
+                  </h3>
+                  <p className="text-slate-400 text-xs leading-relaxed mb-3 line-clamp-2">
+                    {p.description[lang]}
+                  </p>
+                  <div className="flex flex-wrap gap-1">
+                    {p.tech.slice(0, 3).map((t) => (
+                      <span key={t} className="px-1.5 py-0.5 rounded bg-slate-700/60 text-slate-400 text-xs">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+      </div>
+    </main>
+  );
+}
+
+function ContentSection({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <div>
+      <h2 className="text-white font-bold text-lg mb-4">{title}</h2>
+      {children}
+    </div>
+  );
+}
+
+function DetailRow({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="flex justify-between gap-2">
+      <span className="text-slate-500">{label}</span>
+      <span className="text-slate-300 text-right">{value}</span>
+    </div>
+  );
+}
