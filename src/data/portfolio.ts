@@ -11,8 +11,8 @@ export const personal = {
   } as Bil,
   location: "Barcelona, Catalonia, Spain",
   tagline: {
-    en: "Data Engineer with a strong Software Engineering foundation. My strengths lie in understanding systems end-to-end, proposing solutions aligned with real business usage, and simplifying complex processes. From dbt pipelines and data contracts to AI-powered internal tools — I bridge the gap between data infrastructure and the people who use it.",
-    fr: "Ingénieur Data avec une solide formation en génie logiciel. Mes points forts : comprendre les systèmes de bout en bout, proposer des solutions alignées avec les usages réels, et simplifier des processus complexes. Des pipelines dbt aux outils internes propulsés par l'IA — je fais le lien entre l'infrastructure data et ceux qui l'utilisent.",
+    en: "Data Engineer with a strong Software Engineering foundation. My strengths lie in understanding systems end-to-end, proposing solutions aligned with real business usage, and simplifying complex processes. From dbt pipelines and data contracts to AI-powered internal tools ➜ I bridge the gap between data infrastructure and the people who use it.",
+    fr: "Ingénieur Data avec une solide formation en génie logiciel. Mes points forts : comprendre les systèmes de bout en bout, proposer des solutions alignées avec les usages réels, et simplifier des processus complexes. Des pipelines dbt aux outils internes propulsés par l'IA ➜ je fais le lien entre l'infrastructure data et ceux qui l'utilisent.",
   } as Bil,
   badge: { en: "Google Cloud Certified", fr: "Certifié Google Cloud" } as Bil,
   email: "etiennechevrollier@gmail.com",
@@ -30,20 +30,20 @@ export const about = {
   ],
   paragraphs: [
     {
-      en: "I'm Etienne Chevrollier, a Data Engineer with a strong Software Engineering background, currently at papernest in Barcelona. I partner with data and business teams to transform complex infrastructures into robust, sustainable systems — from high-availability pipelines to intuitive internal tools that empower stakeholders to leverage data autonomously.",
-      fr: "Ingénieur Data fort d'un solide bagage en génie logiciel, j'évolue actuellement chez papernest à Barcelone. J'accompagne les équipes data et métiers dans la transformation d'infrastructures complexes en systèmes robustes et pérennes — de la conception de pipelines à haute disponibilité au développement d'outils internes intuitifs qui permettent aux parties prenantes d'exploiter la donnée en toute autonomie.",
+      en: "I'm Etienne Chevrollier, a Data Engineer with a strong Software Engineering background, currently at papernest in Barcelona. I partner with data and business teams to transform complex infrastructures into robust, sustainable systems from high-availability pipelines to intuitive internal tools that empower stakeholders to leverage data autonomously.",
+      fr: "Ingénieur Data fort d'un solide bagage en génie logiciel, j'évolue actuellement chez papernest à Barcelone. J'accompagne les équipes data et métiers dans la transformation d'infrastructures complexes en systèmes robustes et pérennes de la conception de pipelines à haute disponibilité au développement d'outils internes intuitifs qui permettent aux parties prenantes d'exploiter la donnée en toute autonomie.",
     } as Bil,
     {
-      en: "Data reliability is the cornerstone of my expertise. I implement data contracts and strict schema validation to proactively anticipate anomalies before they impact downstream consumers, deploy alerting systems for proactive architecture monitoring, and build dbt models with rigorous software engineering standards — systematically tested, documented, and version-controlled.",
-      fr: "La fiabilité de la donnée est la pierre angulaire de mon expertise. J'implémente des data contracts et des validations de schémas stricts pour anticiper les anomalies avant qu'elles n'impactent les consommateurs, des systèmes d'alerting pour un monitoring proactif des architectures, et des modèles dbt avec la rigueur de l'ingénierie logicielle — systématiquement testés, documentés et versionnés.",
+      en: "Data reliability is the cornerstone of my expertise. I implement data contracts and strict schema validation to proactively anticipate anomalies before they impact downstream consumers, deploy alerting systems for proactive architecture monitoring, and build dbt models with rigorous software engineering standards systematically tested, documented, and version-controlled.",
+      fr: "La fiabilité de la donnée est la pierre angulaire de mon expertise. J'implémente des data contracts et des validations de schémas stricts pour anticiper les anomalies avant qu'elles n'impactent les consommateurs, des systèmes d'alerting pour un monitoring proactif des architectures, et des modèles dbt avec la rigueur de l'ingénierie logicielle systématiquement testés, documentés et versionnés.",
     } as Bil,
     {
       en: "I build pragmatic internal tools designed around real-world usage: secure configuration editors enabling non-technical teams to orchestrate data flows without risk, visualisation platforms co-designed with business stakeholders, and AI-powered solutions to multiply workflow efficiency across both technical and non-technical teams.",
       fr: "Je développe des outils internes pragmatiques, pensés pour les usages réels : des éditeurs de configuration sécurisés permettant aux équipes non-techniques de piloter les flux de données sans risque, des plateformes de restitution visuelle co-construites avec les métiers, et des solutions propulsées par l'IA pour démultiplier l'efficacité des workflows.",
     } as Bil,
     {
-      en: "I believe data is a strategic value-creation lever. My approach goes beyond technical execution: my role as an engineer is to align data with business objectives while anticipating future needs. By making infrastructure reliable, I free up engineering capacity to reinvest in innovation. Data Engineering is not a cost centre — it is a genuine engine for performance and growth.",
-      fr: "Je suis convaincu que la donnée est un levier de création de valeur stratégique. Mon approche dépasse la simple exécution technique : mon rôle est d'aligner la data sur les objectifs de l'entreprise tout en anticipant ses besoins futurs. En fiabilisant l'infrastructure, je libère du temps d'ingénierie pour le réinvestir dans l'innovation. L'ingénierie Data n'est pas un centre de coût — c'est un véritable moteur de performance et de croissance.",
+      en: "I believe data is a strategic value-creation lever. My approach goes beyond technical execution: my role as an engineer is to align data with business objectives while anticipating future needs. By making infrastructure reliable, I free up engineering capacity to reinvest in innovation. Data Engineering is not a cost centre ➜ it's a genuine engine for performance and growth.",
+      fr: "Je suis convaincu que la donnée est un levier de création de valeur stratégique. Mon approche dépasse la simple exécution technique : mon rôle est d'aligner la data sur les objectifs de l'entreprise tout en anticipant ses besoins futurs. En fiabilisant l'infrastructure, je libère du temps d'ingénierie pour le réinvestir dans l'innovation. L'ingénierie Data n'est pas un centre de coût ➜ c'est un véritable moteur de performance et de croissance.",
     } as Bil,
   ],
 };
@@ -58,14 +58,14 @@ export const experiences = [
   {
     role: { en: "Data Engineer", fr: "Ingénieur Data" } as Bil,
     company: "papernest",
-    type: { en: "VIE", fr: "VIE" } as Bil,
+    type: { en: "French International Postgraduate Program (V.I.E)", fr: "VIE (Volontariat International Entreprise)" } as Bil,
     period: "Oct 2025 – Present",
     location: "Barcelona, Spain · Hybrid",
     category: "both" as Category,
     icon: "/logos/papernest.svg" as string | null,
     highlights: {
       en: [
-        "Acting as the sole Data Engineer onsite, primary point of contact for Sales Ops and Data Analysts across FR, ES & IT markets",
+        "Acting as the sole Data Engineer onsite, primary point of contact for Sales Ops and Patnership across FR, ES & IT markets",
         "Designed & developed a custom YAML Configuration Editor ➜ enables non-technical stakeholders to safely configure pipelines, preventing syntax errors and reducing support time",
         "Developing features on the proprietary internal ETL engine (Python) and dbt models, applying software engineering standards (testing, documentation, CI/CD)",
         "Set up data contracts and schema validation to proactively catch data quality issues across markets",
@@ -73,7 +73,7 @@ export const experiences = [
         "Built AI-powered internal tools to accelerate workflows for both technical and non-technical teams",
       ],
       fr: [
-        "Seul ingénieur Data sur site, interlocuteur principal pour les équipes Sales Ops et Data Analysts sur les marchés FR, ES & IT",
+        "Seul Data Engineer sur site, interlocuteur principal pour les équipes Sales Ops et Partnership sur les marchés FR, ES & IT",
         "Conçepteur et développeur d'un éditeur de configuration YAML ➜ permet aux stakeholders non-techniques de configurer des pipelines en toute sécurité, évitant erreurs de syntaxe et réduisant le temps de support",
         "Développement de fonctionnalités sur le moteur ETL interne (Python) et des modèles dbt, avec les standards du génie logiciel (tests, documentation, CI/CD)",
         "Mise en place de data contracts et de validation de schéma pour détecter les problèmes de qualité en amont",
@@ -94,16 +94,16 @@ export const experiences = [
     icon: "/logos/bouygues-telecom.svg" as string | null,
     highlights: {
       en: [
-        "Developed an internal web app for log data visualization & analysis — full-stack, designed and built independently",
+        "Developed an internal web app for log data visualization & analysis, full-stack, designed and built independently",
         "Improved a SQL streaming module within an internal ETL using Apache Flink",
         "Automated documentation generation from Java code & Markdown with Docusaurus",
         "Developed data governance scripts using BigQuery, Teradata, and Hadoop",
       ],
       fr: [
-        "Développé une application web interne de visualisation et d'analyse de logs — full-stack, conçue et construite de façon autonome",
-        "Amélioré un module SQL de streaming au sein d'un ETL interne avec Apache Flink",
-        "Automatisé la génération de documentation depuis le code Java & Markdown avec Docusaurus",
-        "Développé des scripts de gouvernance des données avec BigQuery, Teradata et Hadoop",
+        "Développement d'une application web interne de visualisation et d'analyse de logs, full-stack, conçue et construite de façon autonome",
+        "Amélioration d'un module SQL de streaming au sein d'un ETL interne avec Apache Flink",
+        "Automatisation de la documentation depuis le code Java & Markdown avec Docusaurus",
+        "Développement de scripts pour la gouvernance des données avec BigQuery, Teradata et Hadoop",
       ],
     } as BilArr,
     tech: ["Spring Boot", "React", "ElasticSearch", "MongoDB", "Apache Flink", "Java", "BigQuery", "Teradata", "Hadoop", "Docusaurus"],
@@ -125,7 +125,7 @@ export const experiences = [
         "Managed social media and maintained a blog for the project",
       ],
       fr: [
-        "Co-fondé un projet étudiant (Retrobox) lancé au lycée",
+        "Co-fondateur d'un projet étudiant (Retrobox) lancé au lycée",
         "Développement web avec Vue.js et HTML/CSS pour plusieurs sites",
         "Création de visuels et graphismes avec Photoshop et outils de design",
         "Gestion des réseaux sociaux et tenue d'un blog pour le projet",
@@ -149,9 +149,9 @@ export const experiences = [
         "Automated XML file processing to facilitate ERP integration in companies",
       ],
       fr: [
-        "Développé une application de configuration pour un ERP (EBP) via des fichiers XML",
-        "Conçu et développé une interface Java GUI (Swing) pour configurer et utiliser les données",
-        "Automatisé le traitement des fichiers XML pour faciliter l'intégration de l'ERP en entreprise",
+        "Développement d'une application de configuration pour un ERP (EBP) via des fichiers XML",
+        "Conçeption et développement d'une interface Java GUI (Swing) pour configurer et utiliser les données",
+        "Automatisation du traitement des fichiers XML pour faciliter l'intégration de l'ERP en entreprise",
       ],
     } as BilArr,
     tech: ["Java", "Java Swing", "XML", "Eclipse"],
@@ -176,9 +176,9 @@ export const education = [
         "Digital Consulting Week at EY",
       ],
       fr: [
-        "Majeure : Génie Logiciel — Dev Full-Stack (Vue.js, TypeScript, Node.js), Architecture & Cloud (Microservices, CI/CD, Docker, AWS), UX (Figma)",
+        "Majeure : Software Engineer — Dev Full-Stack (Vue.js, TypeScript, Node.js), Architecture & Cloud (Microservices, CI/CD, Docker, AWS), UX (Figma)",
         "Data & Temps Réel : SQL, NoSQL (MongoDB, ElasticSearch), RabbitMQ",
-        "Mineure : Business Engineering — Growth Hacking, négociation, stratégie commerciale",
+        "Mineure : Ingénieur d’Affaires — Growth Hacking, négociation, stratégie commerciale",
         "Semaine Conseil Digital chez EY",
       ],
     } as BilArr,
@@ -206,7 +206,7 @@ export const education = [
     school: "Université Le Havre Normandie",
     degree: { en: "DUT (Two-Year Technical Degree), Computer Science", fr: "DUT Informatique" } as Bil,
     period: "Sept 2020 – Jun 2022",
-    category: "software" as Category,
+    category: null as Category,
     icon: "/logos/ulhn.png" as string | null,
     details: {
       en: ["Foundation in Java, SQL, algorithms, networks, and software engineering"],
@@ -253,7 +253,7 @@ export const skills: SkillCategory[] = [
     tools: ["Python", "dbt", "SQL", "Apache Flink", "BigQuery", "GCP"],
   },
   {
-    name: { en: "Software Engineering", fr: "Génie Logiciel" },
+    name: { en: "Software Engineering", fr: "Software Engineering" },
     capabilities: {
       en: ["Full-stack web development", "Internal tools & business applications", "API design & backend services", "User-centered interfaces for non-technical users"],
       fr: ["Développement web full-stack", "Outils internes & applications métier", "Conception d'API & services backend", "Interfaces centrées utilisateur pour les profils non-techniques"],
@@ -291,21 +291,21 @@ export type Testimonial = {
 export const testimonials: Testimonial[] = [
   {
     quote: {
-      fr: "J'ai eu l'occasion de manager Étienne lors de son VIE à Barcelone en tant que data engineer chez Papernest. J'ai particulièrement apprécié sa proactivité et son autonomie. À titre d'exemple, il a lui-même initié, défendu et mené à bien un projet à forte valeur ajoutée pour plusieurs équipes de l'entreprise. Il a également fait preuve d'une grande curiosité et d'une excellente capacité à appréhender rapidement les sujets qui lui étaient confiés, ce qui lui a permis de progresser rapidement. Nul doute qu'il mènera une très belle carrière dans la data.",
-      en: "I had the opportunity to manage Étienne during his VIE in Barcelona as a Data Engineer at Papernest. I particularly appreciated his proactivity and autonomy. As an example, he independently initiated, championed, and delivered a high-value project that benefited several teams across the company. He also showed great curiosity and an excellent ability to quickly get up to speed on new topics, which allowed him to progress rapidly. There is no doubt he will have a brilliant career in data.",
+      fr: "J'ai eu l'occasion de manager Etienne lors de son VIE à Barcelone en tant que data engineer chez Papernest. J'ai particulièrement apprécié sa proactivité et son autonomie. À titre d'exemple, il a lui-même initié, défendu et mené à bien un projet à forte valeur ajoutée pour plusieurs équipes de l'entreprise. Il a également fait preuve d'une grande curiosité et d'une excellente capacité à appréhender rapidement les sujets qui lui étaient confiés, ce qui lui a permis de progresser rapidement. Nul doute qu'il mènera une très belle carrière dans la data.",
+      en: "I had the opportunity to manage Etienne during his VIE in Barcelona as a Data Engineer at Papernest. I particularly appreciated his proactivity and autonomy. As an example, he independently initiated, championed, and delivered a high-value project that benefited several teams across the company. He also showed great curiosity and an excellent ability to quickly get up to speed on new topics, which allowed him to progress rapidly. There is no doubt he will have a brilliant career in data.",
     } as Bil,
     name: "Vincent Potin",
-    role: { fr: "Manager direct · Data Engineer VIE", en: "Direct Manager · Data Engineer VIE" } as Bil,
+    role: { fr: "Manager direct · Lead Data Engineer", en: "Direct Manager · Lead Data Engineer" } as Bil,
     company: "papernest",
   },
   {
     quote: {
-      fr: "Étienne délivre un code de qualité, documenté et en respectant les délais. Il sait adapter son discours à son interlocuteur pour expliquer sa démarche et être force de proposition. Je recommande vivement !",
-      en: "Étienne delivers quality, well-documented code on time. He knows how to adapt his communication to his audience, explain his approach clearly, and bring forward relevant proposals. Highly recommended!",
+      fr: "Etienne délivre un code de qualité, documenté et en respectant les délais. Il sait adapter son discours à son interlocuteur pour expliquer sa démarche et être force de proposition. Je recommande vivement !",
+      en: "Etienne delivers quality, well-documented code on time. He knows how to adapt his communication to his audience, explain his approach clearly, and bring forward relevant proposals. Highly recommended!",
     } as Bil,
     name: "Aslane Mortreau",
     role: { fr: "Manager direct · Freelance Data & AI Specialist", en: "Direct Manager · Freelance Data & AI Specialist" } as Bil,
-    company: "R&D Pharmaceutique & Cosmétique",
+    company: "",
   },
   {
     quote: {
@@ -313,7 +313,7 @@ export const testimonials: Testimonial[] = [
       en: "I had the chance to work with Etienne at Bouygues Telecom. He was early in his career and already showed strong autonomy. This, combined with his technical skills, fast learning curve, and positive attitude, made him a great colleague. I would be happy to recommend him.",
     } as Bil,
     name: "Vincent Le Squere",
-    role: { fr: "Architecte logiciel · Java", en: "Software Architect · Java" } as Bil,
+    role: { fr: "Architecte logiciel", en: "Software Architect" } as Bil,
     company: "Bouygues Telecom",
   },
 ];
