@@ -3,7 +3,7 @@ import { projects } from "../data/portfolio";
 import { useLang } from "../lib/lang";
 import { ui } from "../data/ui";
 import { categoryConfig } from "../components/Experience";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 export default function ProjectPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -37,8 +37,7 @@ export default function ProjectPage() {
 
         {/* Back */}
         <Link to="/#projects"
-          className="inline-flex items-center gap-2 text-slate-400 hover:text-indigo-600 text-sm transition-colors mb-10 font-medium">
-          <ArrowLeft size={14} />
+          className="inline-flex items-center text-slate-400 hover:text-indigo-600 text-sm transition-colors mb-10 font-medium">
           {ui.projectPage.back[lang]}
         </Link>
 

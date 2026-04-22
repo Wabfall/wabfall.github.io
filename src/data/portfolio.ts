@@ -42,8 +42,8 @@ export const about = {
       fr: "Je conçois des outils internes alignés sur les usages réels : des éditeurs de configuration YAML permettant aux équipes non-techniques de gérer des pipelines sans risque, des plateformes de visualisation construites à partir des retours utilisateurs, et des outils propulsés par l'IA qui accélèrent réellement les workflows.",
     } as Bil,
     {
-      en: "What sets my approach apart is combining engineering depth with a product mindset — understanding systems end-to-end, identifying where complexity can be eliminated, and always asking whether the solution fits the actual need. The result: less technical debt, more autonomous teams, and data infrastructure that scales with the business.",
-      fr: "Ce qui distingue mon approche, c'est la combinaison d'une expertise technique avec une vision orientée impact — comprendre les systèmes dans leur globalité, identifier où la complexité peut être éliminée, et toujours se demander si la solution est adaptée au besoin réel. Le résultat : moins de dette technique, des équipes plus autonomes et une infrastructure qui scale.",
+      en: "I firmly believe that data brings immense value to every organisation. Our role is to serve the business and deliver on its needs — but as engineers, we also have a responsibility to anticipate future requirements and free up time and engineering capacity to create even more value. We're not just ticket-closers, and certainly not a sunk cost. We have a real part to play.",
+      fr: "Je suis convaincu que la data apporte une immense valeur à chaque structure. Nous devons être au service de l'entreprise et réaliser ses besoins — mais en tant qu'ingénieurs, notre rôle est aussi d'anticiper les futurs besoins et de libérer du temps et de l'ingénierie pour apporter encore plus de valeur. On n'est pas de simples tickeurs, ni une dépense inutile. On a un vrai rôle à jouer.",
     } as Bil,
   ],
 };
