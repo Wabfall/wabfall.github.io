@@ -66,7 +66,7 @@ export const experiences = [
     highlights: {
       en: [
         "Acting as the sole Data Engineer onsite, primary point of contact for Sales Ops and Data Analysts across FR, ES & IT markets",
-        "Designed & developed a custom YAML Configuration Editor — enables non-technical stakeholders to safely configure pipelines, preventing syntax errors and reducing support time",
+        "Designed & developed a custom YAML Configuration Editor ➜ enables non-technical stakeholders to safely configure pipelines, preventing syntax errors and reducing support time",
         "Developing features on the proprietary internal ETL engine (Python) and dbt models, applying software engineering standards (testing, documentation, CI/CD)",
         "Set up data contracts and schema validation to proactively catch data quality issues across markets",
         "Implemented alerting processes for pipeline monitoring and proactive incident detection",
@@ -74,7 +74,7 @@ export const experiences = [
       ],
       fr: [
         "Seul ingénieur Data sur site, interlocuteur principal pour les équipes Sales Ops et Data Analysts sur les marchés FR, ES & IT",
-        "Conçu et développé un éditeur de configuration YAML — permet aux parties prenantes non-techniques de configurer des pipelines en toute sécurité, évitant erreurs de syntaxe et réduisant le temps de support",
+        "Conçepteur et développeur d'un éditeur de configuration YAML ➜ permet aux stakeholders non-techniques de configurer des pipelines en toute sécurité, évitant erreurs de syntaxe et réduisant le temps de support",
         "Développement de fonctionnalités sur le moteur ETL interne (Python) et des modèles dbt, avec les standards du génie logiciel (tests, documentation, CI/CD)",
         "Mise en place de data contracts et de validation de schéma pour détecter les problèmes de qualité en amont",
         "Implémentation de processus d'alerting pour la surveillance proactive des pipelines",
@@ -164,7 +164,7 @@ export const experiences = [
 export const education = [
   {
     school: "ESIEA – École d'Ingénieur·e·s",
-    degree: { en: "Master's Degree, Computer Science & Digital Technologies", fr: "Master Informatique & Technologies Numériques" } as Bil,
+    degree: { en: "Master's Degree, Computer Science & Digital Technologies", fr: "Diplôme d'Ingénieur en Informatique & Technologies Numériques" } as Bil,
     period: "Sept 2022 – Aug 2025",
     category: "both" as Category,
     icon: "/logos/esiea.svg" as string | null,
@@ -250,7 +250,7 @@ export const skills: SkillCategory[] = [
       en: ["Pipeline design & ETL/ELT development", "Data contracts & schema validation", "Alerting & quality monitoring", "dbt modeling, testing & documentation"],
       fr: ["Conception de pipelines & développement ETL/ELT", "Data contracts & validation de schéma", "Alerting & monitoring de la qualité des données", "Modélisation dbt, tests & documentation"],
     },
-    tools: ["Python", "dbt", "Apache Flink", "BigQuery", "GCP", "ETL Frameworks"],
+    tools: ["Python", "dbt", "SQL", "Apache Flink", "BigQuery", "GCP"],
   },
   {
     name: { en: "Software Engineering", fr: "Génie Logiciel" },
@@ -258,15 +258,15 @@ export const skills: SkillCategory[] = [
       en: ["Full-stack web development", "Internal tools & business applications", "API design & backend services", "User-centered interfaces for non-technical users"],
       fr: ["Développement web full-stack", "Outils internes & applications métier", "Conception d'API & services backend", "Interfaces centrées utilisateur pour les profils non-techniques"],
     },
-    tools: ["React", "Next.js", "TypeScript", "Spring Boot", "Node.js", "Vue.js", "Tailwind CSS"],
+    tools: ["React", "Next.js", "TypeScript", "Spring Boot", "Tailwind CSS"],
   },
   {
     name: { en: "Data Platform & Cloud", fr: "Plateforme Data & Cloud" },
     capabilities: {
-      en: ["Cloud data infrastructure", "Data warehouse design & optimization", "Streaming & batch processing", "Data governance"],
-      fr: ["Infrastructure data cloud", "Conception & optimisation de data warehouses", "Traitement en streaming & batch", "Gouvernance des données"],
+      en: ["Cloud data infrastructure (GCP certified)", "Data warehouse design & optimization", "Streaming & batch processing", "Data governance & observability"],
+      fr: ["Infrastructure data cloud (certifié GCP)", "Conception & optimisation de data warehouses", "Traitement en streaming & batch", "Gouvernance des données & observabilité"],
     },
-    tools: ["BigQuery", "Google Cloud Platform", "ElasticSearch", "MongoDB", "Teradata", "Hadoop", "Docker"],
+    tools: ["BigQuery", "Google Cloud Platform", "ElasticSearch", "Docker"],
   },
   {
     name: { en: "AI & Internal Tooling", fr: "IA & Outils Internes" },
@@ -274,15 +274,7 @@ export const skills: SkillCategory[] = [
       en: ["AI-powered tools for technical & non-technical teams", "LLM integration & prompt engineering", "Workflow automation", "Configuration-driven systems"],
       fr: ["Outils IA pour équipes techniques & non-techniques", "Intégration LLM & prompt engineering", "Automatisation des workflows", "Systèmes pilotés par la configuration"],
     },
-    tools: ["Python", "LLM APIs", "Next.js", "React", "YAML"],
-  },
-  {
-    name: { en: "Process & Approach", fr: "Processus & Approche" },
-    capabilities: {
-      en: ["End-to-end system understanding", "Solutions aligned with real business usage", "Documentation & engineering standards", "Cross-functional collaboration", "CI/CD, Git, code quality"],
-      fr: ["Compréhension des systèmes de bout en bout", "Solutions alignées avec les usages métier réels", "Documentation & standards d'ingénierie", "Collaboration cross-fonctionnelle", "CI/CD, Git, qualité de code"],
-    },
-    tools: [],
+    tools: ["Python", "LLM APIs", "Next.js", "React"],
   },
 ];
 
