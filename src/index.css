@@ -6,15 +6,20 @@ html {
 
 body {
   margin: 0;
-  background-color: #0f172a;
-  color: #e2e8f0;
-  font-family: system-ui, 'Segoe UI', sans-serif;
+  background-color: #fafbfc;
+  color: #0f172a;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #1e293b; }
-::-webkit-scrollbar-thumb { background: #6366f1; border-radius: 3px; }
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #c7d2fe; border-radius: 3px; }
 
 #root {
   min-height: 100vh;

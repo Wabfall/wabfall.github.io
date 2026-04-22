@@ -2,7 +2,7 @@ import { projects } from "../data/portfolio";
 import { useLang } from "../lib/lang";
 import { ui } from "../data/ui";
 import { SectionHeader } from "./Experience";
-import { FolderOpen, Star } from "lucide-react";
+import { FolderOpen, ArrowUpRight } from "lucide-react";
 import { GithubIcon } from "./Icons";
 import { Link } from "react-router-dom";
 
@@ -12,21 +12,19 @@ export default function Projects() {
   const others = projects.filter((p) => !p.highlight);
 
   return (
-    <section id="projects" className="py-24 px-6 bg-slate-900/40">
+    <section id="projects" className="py-28 px-6 bg-slate-50 border-y border-slate-100">
       <div className="max-w-5xl mx-auto">
-        <SectionHeader icon={<FolderOpen size={20} />} title={ui.sections.projects[lang]} />
+        <SectionHeader icon={<FolderOpen size={18} />} title={ui.sections.projects[lang]} />
 
-        {/* Featured projects */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 gap-5 mb-12">
           {featured.map((p, i) => (
             <ProjectCard key={i} project={p} featured />
           ))}
         </div>
 
-        {/* Other projects */}
-        <h3 className="text-slate-400 font-medium text-sm uppercase tracking-widest mb-6">
+        <p className="text-slate-400 font-semibold text-xs uppercase tracking-[0.2em] mb-5">
           {ui.projects.others[lang]}
-        </h3>
+        </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {others.map((p, i) => (
             <ProjectCard key={i} project={p} />
@@ -37,68 +35,52 @@ export default function Projects() {
   );
 }
 
-function ProjectCard({
-  project,
-  featured = false,
-}: {
-  project: (typeof projects)[0];
-  featured?: boolean;
-}) {
+function ProjectCard({ project, featured = false }: { project: (typeof projects)[0]; featured?: boolean }) {
   const { lang } = useLang();
 
   return (
-    <div className={`relative bg-slate-800/40 border rounded-2xl p-6 flex flex-col transition-colors duration-200 ${
-      featured ? "border-slate-600 hover:border-slate-500" : "border-slate-700/60 hover:border-slate-600"
-    }`}>
-      {featured && (
-        <div className="absolute top-4 right-4 flex items-center gap-1 text-slate-500 text-xs">
-          <Star size={11} fill="currentColor" />
-          <span>{ui.projects.featured[lang]}</span>
+    <Link
+      to={`/projects/${project.slug}`}
+      className={`group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-200 border ${
+        featured ? "border-indigo-200 hover:border-indigo-300" : "border-slate-200 hover:border-slate-300"
+      }`}
+    >
+      {/* Top accent stripe */}
+      <div className={`h-1 w-full ${featured ? "bg-gradient-to-r from-indigo-400 to-violet-400" : "bg-slate-100"}`} />
+
+      <div className="p-6 flex flex-col h-full">
+        <div className="flex items-start justify-between mb-4">
+          <div className={`p-2 rounded-lg ${featured ? "bg-indigo-50 border border-indigo-100" : "bg-slate-50 border border-slate-100"}`}>
+            <FolderOpen size={18} className={featured ? "text-indigo-500" : "text-slate-400"} />
+          </div>
+          <ArrowUpRight size={16} className="text-slate-300 group-hover:text-indigo-500 transition-colors" />
         </div>
-      )}
 
-      <div className="mb-3">
-        <FolderOpen size={20} className="text-slate-500" />
-      </div>
+        <h3 className="text-slate-900 font-bold text-base mb-2 leading-snug">
+          {project.title[lang]}
+        </h3>
 
-      <h3 className="text-white font-bold text-base mb-3 pr-16 leading-snug">
-        {project.title[lang]}
-      </h3>
+        <p className="text-slate-500 text-sm leading-relaxed flex-1 mb-4">
+          {project.description[lang]}
+        </p>
 
-      <p className="text-slate-400 text-sm leading-relaxed flex-1 mb-4">
-        {project.description[lang]}
-      </p>
+        <div className="flex flex-wrap gap-1.5 mb-4">
+          {project.tech.slice(0, 4).map((t) => (
+            <span key={t} className="px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 text-[11px] font-semibold">
+              {t}
+            </span>
+          ))}
+          {project.tech.length > 4 && (
+            <span className="px-2 py-0.5 rounded-full bg-slate-100 text-slate-400 text-[11px]">+{project.tech.length - 4}</span>
+          )}
+        </div>
 
-      <div className="flex flex-wrap gap-1.5 mb-4">
-        {project.tech.map((t) => (
-          <span key={t} className="px-2 py-0.5 rounded-md bg-slate-700/80 text-slate-300 text-xs">
-            {t}
-          </span>
-        ))}
-      </div>
-
-      <div className="flex items-center justify-between mt-auto">
-        {project.github ? (
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm text-slate-400 hover:text-white transition-colors"
-          >
-            <GithubIcon size={14} />
-            Code
-          </a>
-        ) : (
-          <span className="text-xs text-slate-600 italic">{ui.projects.internal[lang]}</span>
+        {project.github && (
+          <div className="flex items-center gap-1.5 text-xs text-slate-400 mt-auto pt-3 border-t border-slate-100">
+            <GithubIcon size={12} /> Code
+          </div>
         )}
-
-        <Link
-          to={`/projects/${project.slug}`}
-          className="inline-flex items-center gap-1 text-xs text-slate-400 hover:text-slate-200 font-medium transition-colors"
-        >
-          {ui.projects.viewProject[lang]}
-        </Link>
       </div>
-    </div>
+    </Link>
   );
 }

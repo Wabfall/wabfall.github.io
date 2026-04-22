@@ -15,7 +15,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // On project pages, anchor links go back to home first
   const anchorHref = (hash: string) => (pathname === "/" ? hash : `/${hash}`);
 
   const links = [
@@ -30,11 +29,11 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-slate-900/95 backdrop-blur border-b border-slate-800 shadow-lg" : "bg-transparent"
+        scrolled ? "bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm" : "bg-transparent"
       }`}
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="/" className="text-white font-bold text-lg tracking-tight hover:text-slate-300 transition-colors">
+        <a href="/" className="text-blue-600 font-bold text-lg tracking-tight hover:text-blue-700 transition-colors">
           EC
         </a>
 
@@ -43,21 +42,18 @@ export default function Navbar() {
           <ul className="flex gap-6">
             {links.map((l) => (
               <li key={l.href}>
-                <a href={l.href} className="text-sm text-slate-400 hover:text-slate-200 transition-colors font-medium">
+                <a href={l.href} className="text-sm text-slate-500 hover:text-slate-900 transition-colors font-medium">
                   {l.label}
                 </a>
               </li>
             ))}
           </ul>
 
-          {/* Language toggle */}
-          <div className="flex items-center gap-1 bg-slate-800 border border-slate-700 rounded-lg p-1">
+          <div className="flex items-center gap-1 bg-slate-100 border border-slate-200 rounded-lg p-1">
             <button
               onClick={() => setLang("en")}
               className={`px-2.5 py-1 rounded-md text-xs font-semibold transition-all ${
-                lang === "en"
-                  ? "bg-slate-600 text-white"
-                  : "text-slate-400 hover:text-slate-200"
+                lang === "en" ? "bg-blue-600 text-white shadow-sm" : "text-slate-500 hover:text-slate-700"
               }`}
             >
               EN
@@ -65,9 +61,7 @@ export default function Navbar() {
             <button
               onClick={() => setLang("fr")}
               className={`px-2.5 py-1 rounded-md text-xs font-semibold transition-all ${
-                lang === "fr"
-                  ? "bg-slate-600 text-white"
-                  : "text-slate-400 hover:text-slate-200"
+                lang === "fr" ? "bg-blue-600 text-white shadow-sm" : "text-slate-500 hover:text-slate-700"
               }`}
             >
               FR
@@ -77,22 +71,22 @@ export default function Navbar() {
 
         {/* Mobile: lang toggle + hamburger */}
         <div className="md:hidden flex items-center gap-3">
-          <div className="flex items-center gap-0.5 bg-slate-800 border border-slate-700 rounded-lg p-1">
+          <div className="flex items-center gap-0.5 bg-slate-100 border border-slate-200 rounded-lg p-1">
             <button
               onClick={() => setLang("en")}
-              className={`px-2 py-0.5 rounded text-xs font-semibold transition-all ${lang === "en" ? "bg-slate-600 text-white" : "text-slate-400"}`}
+              className={`px-2 py-0.5 rounded text-xs font-semibold transition-all ${lang === "en" ? "bg-blue-600 text-white" : "text-slate-500"}`}
             >
               EN
             </button>
             <button
               onClick={() => setLang("fr")}
-              className={`px-2 py-0.5 rounded text-xs font-semibold transition-all ${lang === "fr" ? "bg-slate-600 text-white" : "text-slate-400"}`}
+              className={`px-2 py-0.5 rounded text-xs font-semibold transition-all ${lang === "fr" ? "bg-blue-600 text-white" : "text-slate-500"}`}
             >
               FR
             </button>
           </div>
           <button
-            className="text-slate-400 hover:text-white"
+            className="text-slate-500 hover:text-slate-900"
             onClick={() => setMenuOpen((v) => !v)}
             aria-label="Toggle menu"
           >
@@ -107,13 +101,13 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-slate-900/98 border-b border-slate-800 px-6 pb-4">
+        <div className="md:hidden bg-white border-b border-slate-200 px-6 pb-4">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
               onClick={() => setMenuOpen(false)}
-              className="block py-2 text-slate-400 hover:text-slate-200 transition-colors"
+              className="block py-2 text-slate-500 hover:text-slate-900 transition-colors"
             >
               {l.label}
             </a>
