@@ -9,7 +9,7 @@ import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-    <BrowserRouter basename="/portfolio-etienne-chevrollier/">
+    <BrowserRouter>
       <LangProvider>
         <ScrollToTop />
         <div className="min-h-screen bg-slate-50 text-slate-900">
