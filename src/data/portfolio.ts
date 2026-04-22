@@ -387,17 +387,17 @@ export const projects = [
       approach: {
         en: [
           "Designed a Next.js/React web interface with real-time YAML validation and an intuitive form-based editor",
-          "Built a Python backend handling YAML parsing, schema validation, and safe application of configuration changes",
-          "Implemented schema-based validation enforcing pipeline configuration rules before any deployment",
+          "Built a Python backend handling API calls with the internal ETL engine and LLMs",
           "Created a context-aware UI translating YAML structure into understandable fields for non-technical users",
-          "Added preview and diff capabilities to show exactly what will change before applying updates",
+          "Integrated an AI Copilot assistant guiding stakeholders through creating, editing, and repairing YAML configurations",
+          "Implemented a testing framework to preview and validate business logic before any production deployment",
         ],
         fr: [
-          "Conçeption d'une interface web Next.js/React avec validation YAML en temps réel et un éditeur basé sur des formulaires intuitifs",
-          "Développement un backend Python gérant les appels APIs avec notre ETL Interne et les LLMs",
-          "Création une interface contextuelle traduisant la structure YAML en champs compréhensibles pour les utilisateurs non-techniques",
-          "Ajout d'une IA Copilot, accompagnant les stakeholders dans la création, la modification et les réparations des YAML",
-          "Implémentation d'un framework de test permettant de prévisualiser et de valider les logiques métiers exactement avant d'appliquer en production",
+          "Conception d'une interface web Next.js/React avec validation YAML en temps réel et un éditeur basé sur des formulaires intuitifs",
+          "Développement d'un backend Python gérant les appels API avec notre ETL interne et les LLMs",
+          "Création d'une interface contextuelle traduisant la structure YAML en champs compréhensibles pour les utilisateurs non-techniques",
+          "Ajout d'un assistant IA Copilot accompagnant les stakeholders dans la création, la modification et la réparation des configurations YAML",
+          "Implémentation d'un framework de test permettant de prévisualiser et de valider les logiques métier avant toute mise en production",
         ],
       } as BilArr,
       solution: {
@@ -443,11 +443,11 @@ export const projects = [
           "Iterated the application design through direct feedback loops with data engineers and analysts",
         ],
         fr: [
-          "Agit en tant que développeur unique sur toute la stack : backend, frontend et conception de la couche data",
-          "Construction d'un backend Spring Boot interrogeant les indices ElasticSearch et les métatdas sur nos bases MongoDB",
+          "Développeur unique sur toute la stack : backend, frontend et conception de la couche data",
+          "Construction d'un backend Spring Boot interrogeant les indices ElasticSearch et les métadonnées sur nos bases MongoDB",
           "Développement d'un frontend React avec visualisation en temps réel des flux de logs, des patterns d'erreurs et des métriques de pipeline",
-          "Conçeption d'un système de filtrage et de recherche adapté à la structure spécifique des logs de Bouygues Telecom",
-          "Itération du design et fonctionnalités de l'application via des boucles de feedback direct avec les ingénieurs et analystes data",
+          "Conception d'un système de filtrage et de recherche adapté à la structure spécifique des logs de Bouygues Telecom",
+          "Itération du design et des fonctionnalités via des boucles de feedback direct avec les ingénieurs et analystes data",
         ],
       } as BilArr,
       solution: {
@@ -455,8 +455,8 @@ export const projects = [
         fr: "Une plateforme web interne unifiée qui agrège, visualise et permet l'analyse des données de log issues de pipelines distribués. Les ingénieurs peuvent surveiller l'état des pipelines, investiguer les anomalies et analyser les patterns de logs historiques via une seule interface dédiée.",
       } as Bil,
       keyOutcome: {
-        en: "Reduced time-to-insight for pipeline issues from hours to minutes. Non-engineering stakeholders gained the ability to independently explore log data, reducing the load on the data engineering team during incident investigations.",
-        fr: "Réduction du temps d'agrégation de l'informations, des problèmes pipeline de plusieurs dizaines de minute à quasi instantément. Les filtres permettant de partager l'information entre les parties techniques.",
+        en: "Pipeline issues that previously required tens of minutes of log digging became visible in seconds. Shared filters let technical teams collaborate and share context instantly during incident investigations.",
+        fr: "Réduction du temps d'agrégation des informations — des problèmes pipeline visibles en quelques secondes là où il fallait plusieurs dizaines de minutes. Les filtres permettent de partager l'information facilement entre les équipes techniques.",
       } as Bil,
       applications: {
         en: ["Streaming pipeline monitoring", "Log analysis & anomaly investigation", "Real-time data quality visibility", "Internal data observability"],
@@ -482,7 +482,7 @@ export const projects = [
     content: {
       context: {
         en: "Kubera SQL is the streaming layer of Bouygues Telecom's internal ETL. It exposes a SQL-derived language on top of Apache Flink, letting data engineers define streaming jobs (source → sink) without writing Flink code directly. The module was functional but not production-ready: connectors lacked documentation and the available options were invisible to users.",
-        fr: "Kubera SQL est la couche streaming de l'ETL interne de Bouygues Telecom. Il expose un langage dérivé du SQL par-dessus Apache Flink, permettant aux data engineers de définir des jobs de streaming (source → puit) sans écrire du Flink directement. Le module était fonctionnel mais pas prêt pour la production : les connecteurs manquaient de documentation et les options disponibles étaient invisibles pour les utilisateurs.",
+        fr: "Kubera SQL est la couche streaming de l'ETL interne de Bouygues Telecom. Il expose un langage dérivé du SQL par-dessus Apache Flink, permettant aux data engineers de définir des jobs de streaming (source → puits) sans écrire du Flink directement. Le module était fonctionnel mais pas prêt pour la production : les connecteurs manquaient de documentation et les options disponibles étaient invisibles pour les utilisateurs.",
       } as Bil,
       approach: {
         en: [
