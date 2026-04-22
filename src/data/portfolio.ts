@@ -163,7 +163,7 @@ export const experiences = [
 
 export const education = [
   {
-    school: "ESIEA – École d'Ingénieur·e·s",
+    school: { en: "ESIEA – Graduate School of Engineering", fr: "ESIEA – École d'Ingénieur·e·s d'un Numérique Utile" } as Bil,
     degree: { en: "Master's Degree, Computer Science & Digital Technologies", fr: "Diplôme d'Ingénieur en Informatique & Technologies Numériques" } as Bil,
     period: "Sept 2022 – Aug 2025",
     category: "both" as Category,
@@ -184,7 +184,7 @@ export const education = [
     } as BilArr,
   },
   {
-    school: "Université du Québec à Chicoutimi (UQAC)",
+    school: { en: "Université du Québec à Chicoutimi (UQAC)", fr: "Université du Québec à Chicoutimi (UQAC)" } as Bil,
     degree: { en: "International Mobility – 3rd Year Exchange", fr: "Mobilité Internationale – Échange 3ème Année" } as Bil,
     period: "May 2023 – Jul 2023",
     category: "both" as Category,
@@ -203,7 +203,7 @@ export const education = [
     } as BilArr,
   },
   {
-    school: "Université Le Havre Normandie",
+    school: { en: "Université Le Havre Normandie", fr: "Université Le Havre Normandie" } as Bil,
     degree: { en: "DUT (Two-Year Technical Degree), Computer Science", fr: "DUT Informatique" } as Bil,
     period: "Sept 2020 – Jun 2022",
     category: null as Category,
@@ -214,7 +214,7 @@ export const education = [
     } as BilArr,
   },
   {
-    school: "Lycée Alain",
+    school: { en: "Lycée Alain", fr: "Lycée Alain" } as Bil,
     degree: { en: "High School Diploma – Scientific track, Engineering Sciences", fr: "Baccalauréat Scientifique – Sciences de l'Ingénieur" } as Bil,
     period: "Sept 2017 – Jun 2020",
     category: null as Category,

@@ -21,7 +21,7 @@ export default function Education() {
                   <div className="flex items-start gap-4 mb-4">
                     {edu.icon ? (
                       <div className="h-10 rounded-xl bg-slate-50 px-3 py-1.5 flex items-center justify-center flex-shrink-0 ring-1 ring-slate-200">
-                        <img src={edu.icon} alt={edu.school} className="h-full w-auto max-w-[110px] object-contain" />
+                        <img src={edu.icon} alt={edu.school[lang]} className="h-full w-auto max-w-[110px] object-contain" />
                       </div>
                     ) : (
                       <div className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center flex-shrink-0">
@@ -30,7 +30,7 @@ export default function Education() {
                     )}
                     <div className="flex-1">
                       <div className="flex flex-wrap items-center gap-2 mb-0.5">
-                        <h3 className="text-slate-900 font-bold text-base">{edu.school}</h3>
+                        <h3 className="text-slate-900 font-bold text-base">{edu.school[lang]}</h3>
                         {cat && (
                           <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full border text-[11px] font-semibold ${cat.badge}`}>
                             {cat.icon} {cat.label}
