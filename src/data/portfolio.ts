@@ -25,25 +25,25 @@ export const personal = {
 
 export const about = {
   hook: [
-    { en: "Not just pipelines.", fr: "Pas seulement des pipelines." } as Bil,
-    { en: "Data systems built to last, and tools people actually use.", fr: "Des systèmes data fiables, utilisés par tous." } as Bil,
+    { en: "Beyond pipelines.", fr: "Au-delà des pipelines." } as Bil,
+    { en: "Reliable data ecosystems, owned by everyone.", fr: "Des écosystèmes data fiables, pilotés par tous." } as Bil,
   ],
   paragraphs: [
     {
-      en: "I'm Etienne Chevrollier, a Data Engineer with a strong Software Engineering background, currently at papernest in Barcelona. I help data and business teams turn complex infrastructure into reliable, usable systems — from building pipelines that don't break, to shipping internal tools that stakeholders can operate independently.",
-      fr: "Je suis Etienne Chevrollier, ingénieur Data avec une solide formation en génie logiciel, actuellement chez papernest à Barcelone. J'aide les équipes data et métier à transformer des infrastructures complexes en systèmes fiables et utilisables — des pipelines qui ne tombent pas en panne aux outils internes que les parties prenantes peuvent opérer de façon autonome.",
+      en: "I'm Etienne Chevrollier, a Data Engineer with a strong Software Engineering background, currently at papernest in Barcelona. I partner with data and business teams to transform complex infrastructures into robust, sustainable systems — from high-availability pipelines to intuitive internal tools that empower stakeholders to leverage data autonomously.",
+      fr: "Ingénieur Data fort d'un solide bagage en génie logiciel, j'évolue actuellement chez papernest à Barcelone. J'accompagne les équipes data et métiers dans la transformation d'infrastructures complexes en systèmes robustes et pérennes — de la conception de pipelines à haute disponibilité au développement d'outils internes intuitifs qui permettent aux parties prenantes d'exploiter la donnée en toute autonomie.",
     } as Bil,
     {
-      en: "Making data trustworthy is at the core of my work. I set up data contracts and schema validation to catch issues upstream before they reach downstream consumers, implement alerting systems for proactive pipeline monitoring, and build dbt models with real software engineering discipline — tested, documented, and version-controlled.",
-      fr: "Fiabiliser la donnée est au cœur de mon travail. Je mets en place des data contracts et de la validation de schéma pour détecter les anomalies en amont, des systèmes d'alerting pour une surveillance proactive des pipelines, et des modèles dbt construits avec une vraie discipline d'ingénierie logicielle — testés, documentés et versionnés.",
+      en: "Data reliability is the cornerstone of my expertise. I implement data contracts and strict schema validation to proactively anticipate anomalies before they impact downstream consumers, deploy alerting systems for proactive architecture monitoring, and build dbt models with rigorous software engineering standards — systematically tested, documented, and version-controlled.",
+      fr: "La fiabilité de la donnée est la pierre angulaire de mon expertise. J'implémente des data contracts et des validations de schémas stricts pour anticiper les anomalies avant qu'elles n'impactent les consommateurs, des systèmes d'alerting pour un monitoring proactif des architectures, et des modèles dbt avec la rigueur de l'ingénierie logicielle — systématiquement testés, documentés et versionnés.",
     } as Bil,
     {
-      en: "I design internal tools shaped around real usage: YAML configuration editors that let non-technical teams manage pipelines without risk, data visualization platforms built from user feedback, and AI-powered tools that genuinely accelerate workflows for both engineers and business analysts.",
-      fr: "Je conçois des outils internes alignés sur les usages réels : des éditeurs de configuration YAML permettant aux équipes non-techniques de gérer des pipelines sans risque, des plateformes de visualisation construites à partir des retours utilisateurs, et des outils propulsés par l'IA qui accélèrent réellement les workflows.",
+      en: "I build pragmatic internal tools designed around real-world usage: secure configuration editors enabling non-technical teams to orchestrate data flows without risk, visualisation platforms co-designed with business stakeholders, and AI-powered solutions to multiply workflow efficiency across both technical and non-technical teams.",
+      fr: "Je développe des outils internes pragmatiques, pensés pour les usages réels : des éditeurs de configuration sécurisés permettant aux équipes non-techniques de piloter les flux de données sans risque, des plateformes de restitution visuelle co-construites avec les métiers, et des solutions propulsées par l'IA pour démultiplier l'efficacité des workflows.",
     } as Bil,
     {
-      en: "I firmly believe that data brings immense value to every organisation. Our role is to serve the business and deliver on its needs — but as engineers, we also have a responsibility to anticipate future requirements and free up time and engineering capacity to create even more value. We're not just ticket-closers, and certainly not a sunk cost. We have a real part to play.",
-      fr: "Je suis convaincu que la data apporte une immense valeur à chaque structure. Nous devons être au service de l'entreprise et réaliser ses besoins — mais en tant qu'ingénieurs, notre rôle est aussi d'anticiper les futurs besoins et de libérer du temps et de l'ingénierie pour apporter encore plus de valeur. On n'est pas de simples tickeurs, ni une dépense inutile. On a un vrai rôle à jouer.",
+      en: "I believe data is a strategic value-creation lever. My approach goes beyond technical execution: my role as an engineer is to align data with business objectives while anticipating future needs. By making infrastructure reliable, I free up engineering capacity to reinvest in innovation. Data Engineering is not a cost centre — it is a genuine engine for performance and growth.",
+      fr: "Je suis convaincu que la donnée est un levier de création de valeur stratégique. Mon approche dépasse la simple exécution technique : mon rôle est d'aligner la data sur les objectifs de l'entreprise tout en anticipant ses besoins futurs. En fiabilisant l'infrastructure, je libère du temps d'ingénierie pour le réinvestir dans l'innovation. L'ingénierie Data n'est pas un centre de coût — c'est un véritable moteur de performance et de croissance.",
     } as Bil,
   ],
 };
