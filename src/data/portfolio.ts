@@ -369,7 +369,7 @@ export const projects = [
     title: { en: "YAML Configuration Editor", fr: "Éditeur de Configuration YAML" } as Bil,
     description: {
       en: "Custom internal web app that allows non-technical stakeholders at papernest to safely configure data pipelines. Prevents syntax errors, reduces support time, and empowers business teams to work autonomously.",
-      fr: "Application web interne permettant aux parties prenantes non-techniques de papernest de configurer des pipelines data en toute sécurité. Évite les erreurs de syntaxe, réduit le temps de support et donne aux équipes métier une autonomie complète.",
+      fr: "Application web interne permettant aux pstakeholders non-techniques de papernest de configurer des pipelines data en toute sécurité. Évite les erreurs de syntaxe, réduit le temps de support et donne aux équipes métier une autonomie plus importante.",
     } as Bil,
     type: { en: "Internal Web Tool", fr: "Outil Interne Web" } as Bil,
     date: "Oct 2025",
@@ -382,7 +382,7 @@ export const projects = [
     content: {
       context: {
         en: "At papernest, data pipeline configuration relied on manually editing YAML files distributed across multiple markets. Non-technical stakeholders — Sales Ops managers and Data Analysts in FR, ES, and IT — had no safe way to adjust configurations without involving a Data Engineer. A single YAML syntax error could silently break pipelines affecting multiple markets.",
-        fr: "Chez papernest, la configuration des pipelines data reposait sur l'édition manuelle de fichiers YAML répartis sur plusieurs marchés. Les parties prenantes non-techniques — responsables Sales Ops et Data Analysts FR, ES et IT — n'avaient aucun moyen sécurisé de modifier les configurations sans impliquer un ingénieur Data. Une simple erreur de syntaxe YAML pouvait silencieusement casser des pipelines sur plusieurs marchés.",
+        fr: "Chez papernest, la configuration des pipelines data reposait sur l'édition manuelle de fichiers YAML répartis sur plusieurs marchés. Les stakeholders non-techniques notamment les responsables Sales Ops FR, ES et IT n'avaient aucun moyen sécurisé de modifier les configurations sans impliquer un ingénieur Data. Une simple erreur de syntaxe YAML pouvait silencieusement casser des pipelines.",
       } as Bil,
       approach: {
         en: [
@@ -393,20 +393,20 @@ export const projects = [
           "Added preview and diff capabilities to show exactly what will change before applying updates",
         ],
         fr: [
-          "Conçu une interface web Next.js/React avec validation YAML en temps réel et un éditeur basé sur des formulaires intuitifs",
-          "Développé un backend Python gérant le parsing YAML, la validation de schéma et l'application sécurisée des modifications",
-          "Implémenté une validation basée sur les schémas pour vérifier les règles de configuration avant tout déploiement",
-          "Créé une interface contextuelle traduisant la structure YAML en champs compréhensibles pour les utilisateurs non-techniques",
-          "Ajouté des capacités de prévisualisation et de diff pour montrer exactement ce qui changera avant d'appliquer",
+          "Conçeption d'une interface web Next.js/React avec validation YAML en temps réel et un éditeur basé sur des formulaires intuitifs",
+          "Développement un backend Python gérant les appels APIs avec notre ETL Interne et les LLMs",
+          "Création une interface contextuelle traduisant la structure YAML en champs compréhensibles pour les utilisateurs non-techniques",
+          "Ajout d'une IA Copilot, accompagnant les stakeholders dans la création, la modification et les réparations des YAML",
+          "Implémentation d'un framework de test permettant de prévisualiser et de valider les logiques métiers exactement avant d'appliquer en production",
         ],
       } as BilArr,
       solution: {
         en: "The editor gives non-technical stakeholders full control over pipeline configuration through a guided, safe interface. All changes are validated in real-time, previewed before application, and deployed through a controlled flow — with no risk of introducing syntax errors into production pipelines.",
-        fr: "L'éditeur donne aux parties prenantes non-techniques un contrôle total sur la configuration des pipelines via une interface guidée et sécurisée. Toutes les modifications sont validées en temps réel, prévisualisées avant application, et déployées via un flux contrôlé — sans risque d'introduire des erreurs de syntaxe dans les pipelines de production.",
+        fr: "L'éditeur donne aux stakeholders non-techniques un contrôle total sur la configuration des pipelines via une interface guidée et sécurisée. Toutes les modifications sont validées en temps réel, prévisualisées avant application, et testés via un flux contrôlé, sans risque d'introduire des erreurs de syntaxe dans les pipelines de production.",
       } as Bil,
       keyOutcome: {
         en: "Support tickets related to pipeline configuration dropped significantly. Sales Ops teams across FR, ES, and IT markets now autonomously manage configurations without engineering intervention, freeing Data Engineer time for higher-value tasks.",
-        fr: "Les tickets de support liés à la configuration des pipelines ont significativement diminué. Les équipes Sales Ops des marchés FR, ES et IT gèrent désormais de manière autonome les configurations sans intervention de l'ingénieur Data.",
+        fr: "Les tickets de support liés à la configuration des pipelines ont significativement diminué. Les équipes Sales Ops des marchés FR, ES et IT gèrent désormais de manière bien plus autonome les configurations sans intervention de l'ingénieur Data.",
       } as Bil,
       applications: {
         en: ["Multi-market data pipeline self-service", "Non-technical stakeholder autonomy", "Reducing engineering bottlenecks in data operations", "Safe configuration management"],
@@ -431,8 +431,8 @@ export const projects = [
     highlight: true,
     content: {
       context: {
-        en: "Log analysis at Bouygues Telecom's data platform team was fragmented across multiple tools with no unified way to explore streaming data quality or investigate pipeline behavior in real time. The team needed a centralized interface consolidating log data from distributed systems, accessible to both engineers and analysts.",
-        fr: "L'analyse des logs au sein de l'équipe data platform de Bouygues Telecom était fragmentée sur plusieurs outils sans moyen unifié d'explorer la qualité des données en streaming ou d'investiguer le comportement des pipelines. L'équipe avait besoin d'une interface centralisée regroupant les données de log des systèmes distribués.",
+        en: "Before this tool, data engineers at Bouygues Telecom had to consult pipeline logs directly on their machines — complex due to sheer volume and the rise of containerized workloads (Docker). The Data team (100+ people) had access to ElasticSearch and Kibana, but neither was tailored to their specific internal ETL logs. They needed a purpose-built interface with targeted filters adapted to the team's workflow.",
+        fr: "L'analyse des logs au sein de la data platform de Bouygues Telecom était fragmentée sur plusieurs outils (logs machines, Kibana..) sans moyen unifié d'explorer le comportement des pipelines. D'autant plus avec l'arrivée de pipelines dockerisés, le pôle Data (+100 personnes) avait besoin d'une interface centralisée regroupant les données de log des systèmes distribués.",
       } as Bil,
       approach: {
         en: [
@@ -444,57 +444,69 @@ export const projects = [
         ],
         fr: [
           "Agit en tant que développeur unique sur toute la stack : backend, frontend et conception de la couche data",
-          "Construit un backend Spring Boot interrogeant les indices ElasticSearch contenant les données de log structurées",
-          "Développé un frontend React avec visualisation en temps réel des flux de logs, des patterns d'erreurs et des métriques de pipeline",
-          "Conçu un système de filtrage et de recherche adapté à la structure spécifique des logs de Bouygues Telecom",
-          "Itéré le design de l'application via des boucles de feedback direct avec les ingénieurs et analystes data",
+          "Construction d'un backend Spring Boot interrogeant les indices ElasticSearch et les métatdas sur nos bases MongoDB",
+          "Développement d'un frontend React avec visualisation en temps réel des flux de logs, des patterns d'erreurs et des métriques de pipeline",
+          "Conçeption d'un système de filtrage et de recherche adapté à la structure spécifique des logs de Bouygues Telecom",
+          "Itération du design et fonctionnalités de l'application via des boucles de feedback direct avec les ingénieurs et analystes data",
         ],
       } as BilArr,
       solution: {
         en: "A unified internal web platform that aggregates, visualizes, and enables analysis of log data from distributed streaming pipelines. Engineers can monitor pipeline health, investigate anomalies, and analyze historical log patterns through a single, purpose-built interface.",
-        fr: "Une plateforme web interne unifiée qui agrège, visualise et permet l'analyse des données de log issues de pipelines de streaming distribués. Les ingénieurs peuvent surveiller l'état des pipelines, investiguer les anomalies et analyser les patterns de logs historiques via une seule interface dédiée.",
+        fr: "Une plateforme web interne unifiée qui agrège, visualise et permet l'analyse des données de log issues de pipelines distribués. Les ingénieurs peuvent surveiller l'état des pipelines, investiguer les anomalies et analyser les patterns de logs historiques via une seule interface dédiée.",
       } as Bil,
       keyOutcome: {
         en: "Reduced time-to-insight for pipeline issues from hours to minutes. Non-engineering stakeholders gained the ability to independently explore log data, reducing the load on the data engineering team during incident investigations.",
-        fr: "Réduction du temps d'analyse des problèmes pipeline de plusieurs heures à quelques minutes. Les parties prenantes non-techniques ont pu explorer de façon autonome les données de log, réduisant la charge sur l'équipe data engineering lors des investigations.",
+        fr: "Réduction du temps d'agrégation de l'informations, des problèmes pipeline de plusieurs dizaines de minute à quasi instantément. Les filtres permettant de partager l'information entre les parties techniques.",
       } as Bil,
       applications: {
         en: ["Streaming pipeline monitoring", "Log analysis & anomaly investigation", "Real-time data quality visibility", "Internal data observability"],
-        fr: ["Monitoring des pipelines streaming", "Analyse de logs & investigation d'anomalies", "Visibilité sur la qualité des données en temps réel", "Observabilité data interne"],
+        fr: ["Monitoring des pipelines", "Analyse de logs & investigation d'anomalies", "Visibilité sur la qualité des données en temps réel", "Observabilité data interne"],
       } as BilArr,
     } as ProjectContent,
   },
   {
     slug: "sql-streaming-module",
-    title: { en: "SQL Streaming Module (Apache Flink)", fr: "Module SQL Streaming (Apache Flink)" } as Bil,
+    title: { en: "Kubera SQL – Streaming Documentation & Evolutions", fr: "Kubera SQL – Documentation & Évolutions Streaming" } as Bil,
     description: {
-      en: "Improved a SQL streaming data processing module within an internal ETL at Bouygues Telecom, developed using Java and Apache Flink.",
-      fr: "Amélioration d'un module SQL de traitement de données en streaming au sein d'un ETL interne chez Bouygues Telecom, développé en Java avec Apache Flink.",
+      en: "Contributions to Kubera SQL, the SQL-on-Flink streaming component of Bouygues Telecom's internal ETL. Main deliverable: an automated documentation system and CI/CD integration to make the module production-ready.",
+      fr: "Contributions à Kubera SQL, le composant streaming SQL-sur-Flink de l'ETL interne de Bouygues Telecom. Livrable principal : un système de documentation automatisée et son intégration CI/CD pour rendre le module prêt pour la production.",
     } as Bil,
     type: { en: "Data Engineering", fr: "Ingénierie des données" } as Bil,
     date: "2023",
     role: { en: "Developer", fr: "Développeur" } as Bil,
     company: "Bouygues Telecom",
     category: "data" as Category,
-    tech: ["Java", "Apache Flink", "SQL"],
+    tech: ["Java", "Apache Flink", "Docusaurus", "Maven", "SQL"],
     github: null as string | null,
     highlight: false,
     content: {
       context: {
-        en: "An existing SQL streaming module within Bouygues Telecom's internal ETL framework presented performance bottlenecks and reliability issues that impacted data processing throughput across the platform.",
-        fr: "Un module SQL de streaming existant dans le framework ETL interne de Bouygues Telecom présentait des goulots d'étranglement de performance et des problèmes de fiabilité impactant le débit de traitement des données sur toute la plateforme.",
+        en: "Kubera SQL is the streaming layer of Bouygues Telecom's internal ETL. It exposes a SQL-derived language on top of Apache Flink, letting data engineers define streaming jobs (source → sink) without writing Flink code directly. The module was functional but not production-ready: connectors lacked documentation and the available options were invisible to users.",
+        fr: "Kubera SQL est la couche streaming de l'ETL interne de Bouygues Telecom. Il expose un langage dérivé du SQL par-dessus Apache Flink, permettant aux data engineers de définir des jobs de streaming (source → puit) sans écrire du Flink directement. Le module était fonctionnel mais pas prêt pour la production : les connecteurs manquaient de documentation et les options disponibles étaient invisibles pour les utilisateurs.",
       } as Bil,
       approach: {
-        en: ["Analyzed existing Apache Flink SQL streaming jobs to identify performance bottlenecks", "Refactored streaming logic to improve parallelism and fault-tolerance", "Enhanced error handling and added monitoring to increase pipeline reliability"],
-        fr: ["Analysé les jobs SQL Apache Flink existants pour identifier les goulots d'étranglement", "Refactorisé la logique de streaming pour améliorer le parallélisme et la tolérance aux pannes", "Amélioré la gestion des erreurs et ajouté du monitoring pour augmenter la fiabilité des pipelines"],
+        en: [
+          "Deep-dived into the internal ETL architecture and Kubera SQL internals to understand the full connector system",
+          "Built a Maven Java plugin that parses Kubera SQL source code, extracts annotations, and auto-generates Markdown documentation",
+          "Deployed a Docusaurus static site to expose the generated docs in a navigable, user-friendly format",
+          "Integrated the documentation pipeline into the existing CI/CD chain",
+          "Worked on streaming evolutions: error handling improvements and robustness to malformed data",
+        ],
+        fr: [
+          "Plongée dans l'architecture de l'ETL interne et les internals de Kubera SQL pour comprendre le système de connecteurs",
+          "Développement d'un plugin Maven Java qui parse le code source de Kubera SQL, extrait les annotations et génère automatiquement de la documentation Markdown",
+          "Déploiement d'un site Docusaurus pour exposer la documentation générée dans un format navigable et user-friendly",
+          "Intégration du pipeline de documentation dans la chaîne CI/CD existante",
+          "Travail sur les évolutions streaming : amélioration de la gestion des erreurs et robustesse aux données malformées",
+        ],
       } as BilArr,
       solution: {
-        en: "Improved SQL streaming module with better throughput, more robust error handling, and enhanced observability over streaming data flows within the internal ETL.",
-        fr: "Module SQL de streaming amélioré avec un meilleur débit, une gestion des erreurs plus robuste et une observabilité accrue sur les flux de données au sein de l'ETL interne.",
+        en: "An automated documentation system that keeps Kubera SQL's connector reference always in sync with the source code, deployed via CI/CD — giving data engineers a reliable, up-to-date reference to write streaming jobs autonomously.",
+        fr: "Un système de documentation automatisée qui maintient la référence des connecteurs Kubera SQL toujours synchronisée avec le code source, déployée via CI/CD — donnant aux data engineers une référence fiable et à jour pour écrire leurs jobs de streaming en autonomie.",
       } as Bil,
       keyOutcome: {
-        en: "Improved data processing reliability and reduced pipeline latency within Bouygues Telecom's streaming infrastructure.",
-        fr: "Fiabilité du traitement des données améliorée et latence des pipelines réduite au sein de l'infrastructure streaming de Bouygues Telecom.",
+        en: "Kubera SQL went from undocumented to fully referenced, unblocking data engineers from having to inspect source code to understand available connectors and options.",
+        fr: "Kubera SQL est passé d'un module non documenté à une référence complète, permettant aux data engineers de comprendre les connecteurs disponibles sans avoir à lire le code source.",
       } as Bil,
       applications: null,
     } as ProjectContent,
