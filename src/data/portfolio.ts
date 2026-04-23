@@ -52,6 +52,8 @@ export const about = {
 
 export type Category = "software" | "data" | "both" | null;
 
+export type ProjectCategory = "fullstack" | "api" | "data";
+
 // ─── Experiences ─────────────────────────────────────────────────────────────
 
 export const experiences = [
@@ -375,7 +377,7 @@ export const projects = [
     date: "Oct 2025",
     role: { en: "Sole developer", fr: "Développeur unique" } as Bil,
     company: "papernest",
-    category: "both" as Category,
+    categories: ["fullstack", "api", "data"] as ProjectCategory[],
     tech: ["Python", "Next.js", "React", "Tailwind CSS", "YAML"],
     github: null as string | null,
     highlight: true,
@@ -425,7 +427,7 @@ export const projects = [
     date: "Sept 2022",
     role: { en: "Sole developer", fr: "Développeur unique" } as Bil,
     company: "Bouygues Telecom",
-    category: "both" as Category,
+    categories: ["fullstack", "data"] as ProjectCategory[],
     tech: ["Spring Boot", "React", "ElasticSearch", "MongoDB"],
     github: null as string | null,
     highlight: true,
@@ -475,7 +477,7 @@ export const projects = [
     date: "2023",
     role: { en: "Developer", fr: "Développeur" } as Bil,
     company: "Bouygues Telecom",
-    category: "data" as Category,
+    categories: ["api", "data"] as ProjectCategory[],
     tech: ["Java", "Apache Flink", "Docusaurus", "Maven", "SQL"],
     github: null as string | null,
     highlight: false,
@@ -547,38 +549,54 @@ export const projects = [
     } as ProjectContent,
   },
   {
-    slug: "data-analysis-addiction-study",
-    title: { en: "Data Analysis – Addiction Study", fr: "Analyse de Données – Étude sur l'Addiction" } as Bil,
+    slug: "escobaddictions",
+    title: { en: "EscobAddictions — Global Drug Data Analysis", fr: "EscobAddictions — Analyse de Données sur les Drogues" } as Bil,
     description: {
-      en: "Data analysis project on addiction statistics developed at UQAC using Jupyter Notebook and Pandas, with a full written report.",
-      fr: "Projet d'analyse de données sur les statistiques d'addiction développé à l'UQAC avec Jupyter Notebook et Pandas, avec un rapport complet.",
+      en: "Exploratory data analysis on global drug phenomena across four independent studies: mortality by substance, consumption by age group, cocaine–crime correlation, and drug-related imprisonment trends. Includes an interactive Power BI dashboard.",
+      fr: "Analyse exploratoire des drogues dans le monde à travers quatre études indépendantes : mortalité par substance, consommation par tranche d'âge, corrélation cocaïne–criminalité, et évolution des incarcérations liées aux drogues. Inclut un dashboard Power BI interactif.",
     } as Bil,
     type: { en: "Academic Data Science Project", fr: "Projet Académique Data Science" } as Bil,
     date: "Jul 2023",
     role: { en: "Data analyst", fr: "Data analyst" } as Bil,
     company: "UQAC",
     category: "data" as Category,
-    tech: ["Python", "Pandas", "Jupyter Notebook"],
-    github: null as string | null,
+    tech: ["Python", "Pandas", "NumPy", "Matplotlib", "Power BI", "Jupyter Notebook"],
+    github: "https://github.com/Wabfall/escobaddictions" as string | null,
     highlight: false,
     content: {
       context: {
-        en: "Academic data science project at UQAC analyzing addiction statistics, covering the complete data science workflow from raw data ingestion to statistical insights and written report.",
-        fr: "Projet académique de data science à l'UQAC analysant des statistiques sur l'addiction, couvrant l'intégralité du workflow data science depuis l'ingestion des données brutes jusqu'aux insights statistiques et au rapport écrit.",
+        en: "Academic data science project at UQAC (Université du Québec à Chicoutimi), inspired by the Netflix series Narcos. The team approached the project from the angle of a fictional anti-drug agency: rather than a single narrow question, we conducted four independent studies to understand the evolution, impact, and correlations surrounding global drug phenomena. Data was sourced from Kaggle, Our World in Data, the World Bank, and UNODC.",
+        fr: "Projet académique de data science à l'UQAC, inspiré par la série Netflix Narcos. L'équipe a abordé le projet sous l'angle d'une organisation anti-drogue fictive : plutôt qu'une seule problématique étroite, nous avons réalisé quatre études indépendantes pour comprendre l'évolution, l'impact et les corrélations autour des drogues dans le monde. Les données proviennent de Kaggle, Our World in Data, la Banque mondiale et l'UNODC.",
       } as Bil,
       approach: {
-        en: ["Collected and cleaned addiction statistics dataset from public sources", "Applied statistical analysis with Pandas and NumPy", "Visualized findings with Matplotlib and Seaborn", "Produced a structured written report documenting methodology and results"],
-        fr: ["Collecté et nettoyé un jeu de données sur les statistiques d'addiction", "Appliqué des analyses statistiques avec Pandas et NumPy", "Visualisé les résultats avec Matplotlib et Seaborn", "Produit un rapport écrit structuré documentant la méthodologie et les résultats"],
+        en: [
+          "Study 1 — Analyzed drug-related overdose deaths in Connecticut (2012–2018): mortality rate per substance, average victim age, and sex breakdown using Chief Medical Examiner data",
+          "Study 2 — Mapped drug use patterns by age group across the US (12–65+): consumption rates and frequency for 12 substances including alcohol, marijuana, heroin, and fentanyl",
+          "Study 3 — Explored the correlation between cocaine death rates and intentional homicide rates across countries using normalized covariance on World Bank + Our World in Data datasets",
+          "Study 4 — Tracked prison admission trends for drug trafficking vs. possession across countries over 2016–2021 using UNODC Criminal Justice Statistics",
+          "Built an interactive Power BI dashboard with 3 pages: deaths by substance, drug use by age, and a world map of cocaine mortality rates (1990–2019)",
+        ],
+        fr: [
+          "Étude 1 — Analyse des décès par overdose dans le Connecticut (2012–2018) : taux de mortalité par substance, âge moyen des victimes et répartition par sexe à partir des données du médecin légiste en chef",
+          "Étude 2 — Cartographie de la consommation de drogues par tranche d'âge aux États-Unis (12–65+) : taux et fréquence de consommation pour 12 substances dont alcool, marijuana, héroïne et fentanyl",
+          "Étude 3 — Exploration de la corrélation entre taux de mortalité liée à la cocaïne et taux d'homicides par pays via la covariance normalisée sur les données Banque mondiale + Our World in Data",
+          "Étude 4 — Suivi de l'évolution des entrées en prison pour trafic vs. possession de drogue par pays sur 2016–2021 à partir des statistiques UNODC",
+          "Construction d'un dashboard Power BI interactif en 3 pages : décès par substance, consommation par âge, et carte mondiale des taux de mortalité liés à la cocaïne (1990–2019)",
+        ],
       } as BilArr,
       solution: {
-        en: "A complete Jupyter Notebook-based pipeline: from raw data ingestion and cleaning to statistical analysis, visualization, and a written analytical report.",
-        fr: "Un pipeline complet basé sur Jupyter Notebook : depuis l'ingestion et le nettoyage des données brutes jusqu'à l'analyse statistique, la visualisation et un rapport analytique écrit.",
+        en: "Four Jupyter Notebooks covering end-to-end data pipelines — ingestion, cleaning, feature engineering, analysis, and visualization — consolidated into a written report and an interactive Power BI dashboard for stakeholder communication.",
+        fr: "Quatre Jupyter Notebooks couvrant des pipelines data de bout en bout — ingestion, nettoyage, feature engineering, analyse et visualisation — consolidés dans un rapport écrit et un dashboard Power BI interactif pour la communication aux parties prenantes.",
       } as Bil,
       keyOutcome: {
-        en: "End-to-end data science workflow: data collection, cleaning, analysis, visualization, and documentation — in a reproducible Jupyter environment.",
-        fr: "Workflow data science de bout en bout : collecte, nettoyage, analyse, visualisation et documentation — dans un environnement Jupyter reproductible.",
+        en: "Key findings: fentanyl deaths rose sharply in the US between 2012–2018; painkillers are the leading overdose cause for women; cocaine mortality correlates positively with crime rates in Israel, Venezuela, Russia, Spain, and Canada; drug-related imprisonment is on an upward trend globally. All findings come with appropriate caveats on data quality and causality.",
+        fr: "Résultats clés : forte hausse des décès liés au fentanyl aux États-Unis entre 2012 et 2018 ; les anti-douleurs sont la première cause d'overdose chez les femmes ; la mortalité liée à la cocaïne corrèle positivement avec les taux de criminalité en Israël, Venezuela, Russie, Espagne et Canada ; les incarcérations liées aux drogues suivent une tendance à la hausse mondiale. Tous les résultats sont accompagnés des réserves appropriées sur la qualité des données et la causalité.",
       } as Bil,
-      applications: null,
+      applications: {
+        en: ["Drug-related mortality trend analysis", "Demographic consumption profiling", "Cross-country policy impact comparison", "Data storytelling with Power BI"],
+        fr: ["Analyse des tendances de mortalité liée aux drogues", "Profilage démographique de la consommation", "Comparaison de l'impact des politiques par pays", "Data storytelling avec Power BI"],
+      } as BilArr,
+      link: "https://github.com/Wabfall/escobaddictions",
     } as ProjectContent,
   },
   {
@@ -614,6 +632,61 @@ export const projects = [
         fr: "Le personnel non-technique peut configurer et intégrer l'ERP sans toucher directement au XML, réduisant les erreurs de configuration et le temps d'intégration.",
       } as Bil,
       applications: null,
+    } as ProjectContent,
+  },
+  {
+    slug: "linkedin-image-generator-api",
+    title: { en: "LinkedIn Image Generator API", fr: "API de Génération d'Images LinkedIn" } as Bil,
+    description: {
+      en: "Self-hosted Next.js API that generates pixel-perfect LinkedIn post PNG images from a JSON payload. Supports lightweight markdown, emoji rendering, platform-native typography, image galleries, and fully customizable themes.",
+      fr: "API Next.js auto-hébergée qui génère des images PNG de posts LinkedIn à partir d'un payload JSON. Supporte le markdown, le rendu d'emojis, la typographie native par plateforme, les galeries d'images et les thèmes personnalisables.",
+    } as Bil,
+    type: { en: "Open Source API", fr: "API Open Source" } as Bil,
+    date: "Apr 2026",
+    role: { en: "Sole developer", fr: "Développeur unique" } as Bil,
+    company: "Personal Project",
+    category: "software" as Category,
+    tech: ["Next.js", "TypeScript", "Satori", "React", "Node.js"],
+    github: "https://github.com/Wabfall/linkedin-post-generator" as string | null,
+    highlight: false,
+    content: {
+      context: {
+        en: "Needed a simple, self-hostable way to generate Open Graph images that look exactly like LinkedIn posts — for blog previews, mockups, and social media visuals. Existing solutions were either closed, cloud-only, or didn't support the level of customisation required.",
+        fr: "Besoin d'une solution simple et auto-hébergeable pour générer des images Open Graph ressemblant exactement à des posts LinkedIn — pour des aperçus de blog, des mockups et des visuels pour les réseaux sociaux. Les solutions existantes étaient soit fermées, soit cloud uniquement, soit insuffisamment personnalisables.",
+      } as Bil,
+      approach: {
+        en: [
+          "Built a single Next.js API route (Node.js runtime) accepting a JSON payload and returning a binary PNG",
+          "Used Satori to convert a React component tree into SVG entirely server-side, with no browser or headless Chrome dependency",
+          "Converted the SVG to a high-resolution PNG via @resvg/resvg-js, a Rust-based renderer",
+          "Bundled Inter, SF Pro Text, Segoe UI, Roboto, and Noto Emoji fonts locally — no external font API calls at render time",
+          "Implemented a lightweight markdown parser for bold, italic, links, and hashtags, plus SVG-sprite-based emoji rendering (Twemoji / Noto Color Emoji)",
+          "Added a server-side height estimation algorithm to auto-size the card based on text length, emoji density, and line breaks",
+          "Supported LinkedIn-style image gallery layouts (1 to 4+ attachments with overflow badge) and customisable color themes",
+        ],
+        fr: [
+          "Construction d'une route API Next.js unique (runtime Node.js) acceptant un payload JSON et retournant un PNG binaire",
+          "Utilisation de Satori pour convertir un arbre de composants React en SVG entièrement côté serveur, sans navigateur ni dépendance à Headless Chrome",
+          "Conversion du SVG en PNG haute résolution via @resvg/resvg-js, un renderer basé sur Rust",
+          "Polices Inter, SF Pro Text, Segoe UI, Roboto et Noto Emoji embarquées localement — aucun appel à une API de polices externe au moment du rendu",
+          "Implémentation d'un parser markdown léger pour le gras, l'italique, les liens et les hashtags, avec rendu d'emojis via sprites SVG (Twemoji / Noto Color Emoji)",
+          "Algorithme d'estimation de hauteur côté serveur pour dimensionner automatiquement la carte selon la longueur du texte, la densité d'emojis et les sauts de ligne",
+          "Support des galeries d'images style LinkedIn (1 à 4+ pièces jointes avec badge de débordement) et des thèmes de couleurs personnalisables",
+        ],
+      } as BilArr,
+      solution: {
+        en: "A zero-dependency, self-hosted image generation API: POST a JSON object describing the post, receive a PNG. The entire render pipeline — markdown parsing, font loading, SVG generation, PNG conversion — runs in a single Node.js process with no external services.",
+        fr: "Une API de génération d'images auto-hébergée sans dépendances externes : POST un objet JSON décrivant le post, reçoit un PNG. L'intégralité du pipeline de rendu — parsing markdown, chargement de polices, génération SVG, conversion PNG — s'exécute dans un seul processus Node.js sans services externes.",
+      } as Bil,
+      keyOutcome: {
+        en: "Generates a full LinkedIn post image in under a second. Covers 25 documented feature scenarios (platform styles, device layouts, markdown, emojis, attachments, themes) each validated by a dedicated test image.",
+        fr: "Génère une image de post LinkedIn complète en moins d'une seconde. Couvre 25 scénarios de fonctionnalités documentés (styles de plateforme, layouts de device, markdown, emojis, pièces jointes, thèmes), chacun validé par une image de test dédiée.",
+      } as Bil,
+      applications: {
+        en: ["Open Graph image generation for blogs and websites", "LinkedIn post mockups for presentations", "Dynamic social media visual generation", "Programmatic content preview thumbnails"],
+        fr: ["Génération d'images Open Graph pour blogs et sites web", "Mockups de posts LinkedIn pour présentations", "Génération programmatique de visuels pour les réseaux sociaux", "Miniatures de prévisualisation de contenu dynamique"],
+      } as BilArr,
+      link: "https://github.com/Wabfall/linkedin-post-generator",
     } as ProjectContent,
   },
 ];
