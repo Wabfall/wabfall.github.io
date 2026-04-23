@@ -11,9 +11,9 @@ type Filter = "all" | ProjectCategory;
 
 const filters: { key: Filter; labelKey: keyof typeof ui.projects }[] = [
   { key: "all",       labelKey: "filterAll"       },
+  { key: "data",      labelKey: "filterData"      },
   { key: "fullstack", labelKey: "filterFullstack" },
   { key: "api",       labelKey: "filterApi"       },
-  { key: "data",      labelKey: "filterData"      },
 ];
 
 export default function Projects() {
