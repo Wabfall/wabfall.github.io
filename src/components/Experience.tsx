@@ -22,7 +22,7 @@ export function categoryConfig(category: Category) {
     icon: <Database size={10} />,
   };
   if (category === "both") return {
-    label: "Software & Data",
+    label: "Data & Software",
     accent: "border-l-indigo-400",
     dotBorder: "border-slate-200",
     dotIcon: "text-slate-400",
