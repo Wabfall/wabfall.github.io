@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { projects } from "../data/portfolio";
 import { useLang } from "../lib/lang";
 import { ui } from "../data/ui";
-import { categoryConfig } from "../components/Experience";
+import { projectCategoryConfig } from "../components/Experience";
 import { ExternalLink } from "lucide-react";
 
 export default function ProjectPage() {
@@ -24,7 +24,7 @@ export default function ProjectPage() {
     );
   }
 
-  const cat = categoryConfig(project.category);
+  const sortedCategories = [...project.categories].sort((a, b) => (a === "data" ? -1 : b === "data" ? 1 : 0));
   const content = project.content;
   const others = projects
     .filter((p) => p.slug !== slug)
@@ -44,11 +44,14 @@ export default function ProjectPage() {
         {/* Header */}
         <div className="mb-14">
           <div className="flex items-center gap-3 mb-4 flex-wrap">
-            {cat && (
-              <span className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full border text-xs font-semibold ${cat.badge}`}>
-                {cat.icon} {cat.label}
-              </span>
-            )}
+            {sortedCategories.map((c) => {
+              const cfg = projectCategoryConfig(c);
+              return cfg ? (
+                <span key={c} className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full border text-xs font-semibold ${cfg.badge}`}>
+                  {cfg.icon} {cfg.label}
+                </span>
+              ) : null;
+            })}
             <span className="text-slate-400 text-xs font-medium">{project.date}</span>
             <span className="text-slate-400 text-xs">· {project.company}</span>
           </div>
