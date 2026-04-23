@@ -1,20 +1,19 @@
 import { useState } from "react";
-import { projects } from "../data/portfolio";
-import type { Category } from "../data/portfolio";
+import { projects, type ProjectCategory } from "../data/portfolio";
 import { useLang } from "../lib/lang";
 import { ui } from "../data/ui";
-import { SectionHeader, categoryConfig } from "./Experience";
+import { SectionHeader, projectCategoryConfig } from "./Experience";
 import { FolderOpen, ArrowUpRight } from "lucide-react";
 import { GithubIcon } from "./Icons";
 import { Link } from "react-router-dom";
 
-type Filter = "all" | "data" | "software" | "both";
+type Filter = "all" | ProjectCategory;
 
 const filters: { key: Filter; labelKey: keyof typeof ui.projects }[] = [
-  { key: "all",      labelKey: "filterAll"      },
-  { key: "data",     labelKey: "filterData"     },
-  { key: "software", labelKey: "filterSoftware" },
-  { key: "both",     labelKey: "filterBoth"     },
+  { key: "all",       labelKey: "filterAll"       },
+  { key: "fullstack", labelKey: "filterFullstack" },
+  { key: "api",       labelKey: "filterApi"       },
+  { key: "data",      labelKey: "filterData"      },
 ];
 
 export default function Projects() {
@@ -23,7 +22,7 @@ export default function Projects() {
 
   const filtered = active === "all"
     ? projects
-    : projects.filter((p) => p.category === active);
+    : projects.filter((p) => p.categories.includes(active as ProjectCategory));
 
   const featured = filtered.filter((p) => p.highlight);
   const others   = filtered.filter((p) => !p.highlight);
@@ -81,7 +80,6 @@ export default function Projects() {
 
 function ProjectCard({ project, featured = false }: { project: (typeof projects)[0]; featured?: boolean }) {
   const { lang } = useLang();
-  const cat = categoryConfig(project.category as Category);
 
   return (
     <Link
@@ -95,15 +93,18 @@ function ProjectCard({ project, featured = false }: { project: (typeof projects)
 
       <div className="p-6 flex flex-col h-full">
         <div className="flex items-start justify-between mb-4">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-wrap">
             <div className={`p-2 rounded-lg ${featured ? "bg-indigo-50 border border-indigo-100" : "bg-slate-50 border border-slate-100"}`}>
               <FolderOpen size={18} className={featured ? "text-indigo-500" : "text-slate-400"} />
             </div>
-            {cat && (
-              <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full border text-[11px] font-semibold ${cat.badge}`}>
-                {cat.icon} {cat.label}
-              </span>
-            )}
+            {project.categories.map((c) => {
+              const cfg = projectCategoryConfig(c);
+              return cfg ? (
+                <span key={c} className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full border text-[11px] font-semibold ${cfg.badge}`}>
+                  {cfg.icon} {cfg.label}
+                </span>
+              ) : null;
+            })}
           </div>
           <ArrowUpRight size={16} className="text-slate-300 group-hover:text-indigo-500 transition-colors flex-shrink-0" />
         </div>

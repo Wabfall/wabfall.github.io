@@ -1,4 +1,4 @@
-import { experiences, type Category } from "../data/portfolio";
+import { experiences, type Category, type ProjectCategory } from "../data/portfolio";
 import { useLang } from "../lib/lang";
 import { ui } from "../data/ui";
 import { Briefcase, MapPin, Calendar, Code2, Database, Layers } from "lucide-react";
@@ -30,6 +30,24 @@ export function categoryConfig(category: Category) {
     icon: <Layers size={10} />,
   };
   return null;
+}
+
+export function projectCategoryConfig(cat: ProjectCategory) {
+  if (cat === "fullstack") return {
+    label: "Full-Stack",
+    badge: "bg-violet-50 border-violet-200 text-violet-700",
+    icon: <Layers size={10} />,
+  };
+  if (cat === "api") return {
+    label: "API & Backend",
+    badge: "bg-blue-50 border-blue-200 text-blue-700",
+    icon: <Code2 size={10} />,
+  };
+  if (cat === "data") return {
+    label: "Data",
+    badge: "bg-emerald-50 border-emerald-200 text-emerald-700",
+    icon: <Database size={10} />,
+  };
 }
 
 export default function Experience() {
