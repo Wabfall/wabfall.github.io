@@ -1,35 +1,79 @@
+import { useState } from "react";
 import { projects } from "../data/portfolio";
+import type { Category } from "../data/portfolio";
 import { useLang } from "../lib/lang";
 import { ui } from "../data/ui";
-import { SectionHeader } from "./Experience";
+import { SectionHeader, categoryConfig } from "./Experience";
 import { FolderOpen, ArrowUpRight } from "lucide-react";
 import { GithubIcon } from "./Icons";
 import { Link } from "react-router-dom";
 
+type Filter = "all" | "data" | "software" | "both";
+
+const filters: { key: Filter; labelKey: keyof typeof ui.projects }[] = [
+  { key: "all",      labelKey: "filterAll"      },
+  { key: "data",     labelKey: "filterData"     },
+  { key: "software", labelKey: "filterSoftware" },
+  { key: "both",     labelKey: "filterBoth"     },
+];
+
 export default function Projects() {
   const { lang } = useLang();
-  const featured = projects.filter((p) => p.highlight);
-  const others = projects.filter((p) => !p.highlight);
+  const [active, setActive] = useState<Filter>("all");
+
+  const filtered = active === "all"
+    ? projects
+    : projects.filter((p) => p.category === active);
+
+  const featured = filtered.filter((p) => p.highlight);
+  const others   = filtered.filter((p) => !p.highlight);
 
   return (
     <section id="projects" className="py-28 px-6 bg-slate-50 border-y border-slate-100">
       <div className="max-w-5xl mx-auto">
         <SectionHeader icon={<FolderOpen size={18} />} title={ui.sections.projects[lang]} />
 
-        <div className="grid md:grid-cols-2 gap-5 mb-12">
-          {featured.map((p, i) => (
-            <ProjectCard key={i} project={p} featured />
+        {/* Filter bar */}
+        <div className="flex flex-wrap gap-2 mb-10">
+          {filters.map(({ key, labelKey }) => (
+            <button
+              key={key}
+              onClick={() => setActive(key)}
+              className={`px-4 py-1.5 rounded-full text-xs font-bold border transition-all duration-150 ${
+                active === key
+                  ? "bg-indigo-500 border-indigo-500 text-white shadow-sm"
+                  : "bg-white border-slate-200 text-slate-500 hover:border-indigo-300 hover:text-indigo-500"
+              }`}
+            >
+              {ui.projects[labelKey][lang]}
+            </button>
           ))}
         </div>
 
-        <p className="text-slate-400 font-semibold text-xs uppercase tracking-[0.2em] mb-5">
-          {ui.projects.others[lang]}
-        </p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {others.map((p, i) => (
-            <ProjectCard key={i} project={p} />
-          ))}
-        </div>
+        {featured.length > 0 && (
+          <div className="grid md:grid-cols-2 gap-5 mb-12">
+            {featured.map((p, i) => (
+              <ProjectCard key={i} project={p} featured />
+            ))}
+          </div>
+        )}
+
+        {others.length > 0 && (
+          <>
+            <p className="text-slate-400 font-semibold text-xs uppercase tracking-[0.2em] mb-5">
+              {ui.projects.others[lang]}
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {others.map((p, i) => (
+                <ProjectCard key={i} project={p} />
+              ))}
+            </div>
+          </>
+        )}
+
+        {filtered.length === 0 && (
+          <p className="text-slate-400 text-sm text-center py-16">—</p>
+        )}
       </div>
     </section>
   );
@@ -37,6 +81,7 @@ export default function Projects() {
 
 function ProjectCard({ project, featured = false }: { project: (typeof projects)[0]; featured?: boolean }) {
   const { lang } = useLang();
+  const cat = categoryConfig(project.category as Category);
 
   return (
     <Link
@@ -50,10 +95,17 @@ function ProjectCard({ project, featured = false }: { project: (typeof projects)
 
       <div className="p-6 flex flex-col h-full">
         <div className="flex items-start justify-between mb-4">
-          <div className={`p-2 rounded-lg ${featured ? "bg-indigo-50 border border-indigo-100" : "bg-slate-50 border border-slate-100"}`}>
-            <FolderOpen size={18} className={featured ? "text-indigo-500" : "text-slate-400"} />
+          <div className="flex items-center gap-2">
+            <div className={`p-2 rounded-lg ${featured ? "bg-indigo-50 border border-indigo-100" : "bg-slate-50 border border-slate-100"}`}>
+              <FolderOpen size={18} className={featured ? "text-indigo-500" : "text-slate-400"} />
+            </div>
+            {cat && (
+              <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full border text-[11px] font-semibold ${cat.badge}`}>
+                {cat.icon} {cat.label}
+              </span>
+            )}
           </div>
-          <ArrowUpRight size={16} className="text-slate-300 group-hover:text-indigo-500 transition-colors" />
+          <ArrowUpRight size={16} className="text-slate-300 group-hover:text-indigo-500 transition-colors flex-shrink-0" />
         </div>
 
         <h3 className="text-slate-900 font-bold text-base mb-2 leading-snug">

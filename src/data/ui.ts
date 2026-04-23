@@ -34,6 +34,10 @@ export const ui = {
     internal:      { en: "Internal – code private", fr: "Interne – code privé" } as Bil,
     moreProjects:  { en: "More projects",         fr: "Autres projets"     } as Bil,
     viewAll:       { en: "View all →",            fr: "Voir tout →"        } as Bil,
+    filterAll:     { en: "All",                   fr: "Tous"               } as Bil,
+    filterData:    { en: "Data",                  fr: "Data"               } as Bil,
+    filterSoftware:{ en: "Software",              fr: "Software"           } as Bil,
+    filterBoth:    { en: "Data & Software",       fr: "Data & Software"    } as Bil,
   },
   projectPage: {
     back:         { en: "← Back to projects",  fr: "← Retour aux projets" } as Bil,
