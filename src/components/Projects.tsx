@@ -18,7 +18,7 @@ const filters: { key: Filter; labelKey: keyof typeof ui.projects }[] = [
 
 export default function Projects() {
   const { lang } = useLang();
-  const [active, setActive] = useState<Filter>("all");
+  const [active, setActive] = useState<Filter>("data");
 
   const filtered = active === "all"
     ? projects

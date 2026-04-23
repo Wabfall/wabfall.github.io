@@ -480,7 +480,7 @@ export const projects = [
     categories: ["api", "data"] as ProjectCategory[],
     tech: ["Java", "Apache Flink", "Docusaurus", "Maven", "SQL"],
     github: null as string | null,
-    highlight: false,
+    highlight: true,
     content: {
       context: {
         en: "Bouygues Telecom's internal ETL includes a SQL streaming module built on top of Apache Flink. It exposes a SQL-derived language letting data engineers define streaming jobs (source → sink) without writing Flink code directly. The module was functional but not production-ready: connectors lacked documentation and the available options were invisible to users.",
@@ -509,41 +509,6 @@ export const projects = [
       keyOutcome: {
         en: "The streaming module went from entirely undocumented to fully referenced, unblocking data engineers from having to inspect source code to understand available connectors and options.",
         fr: "Le module streaming est passé d'un état non documenté à une référence complète, permettant aux data engineers de comprendre les connecteurs disponibles sans avoir à lire le code source.",
-      } as Bil,
-      applications: null,
-    } as ProjectContent,
-  },
-  {
-    slug: "bank-web-app-uqac",
-    title: { en: "Bank Web App (UQAC)", fr: "Application Bancaire Web (UQAC)" } as Bil,
-    description: {
-      en: "Web application for a fictional bank developed during international exchange at UQAC. Full-stack project with React, TypeScript, and Spring Boot.",
-      fr: "Application web pour une banque fictive développée lors de l'échange international à l'UQAC. Projet full-stack avec React, TypeScript et Spring Boot.",
-    } as Bil,
-    type: { en: "Academic Full-Stack Project", fr: "Projet Académique Full-Stack" } as Bil,
-    date: "Jun 2023",
-    role: { en: "Full-stack developer", fr: "Développeur full-stack" } as Bil,
-    company: "UQAC",
-    categories: ["fullstack"] as ProjectCategory[],
-    tech: ["React", "TypeScript", "Spring Boot"],
-    github: null as string | null,
-    highlight: false,
-    content: {
-      context: {
-        en: "Academic full-stack project at UQAC building a banking web application as part of the Advanced Web Technologies course, practicing modern full-stack development with React, TypeScript, and Spring Boot.",
-        fr: "Projet académique full-stack à l'UQAC construisant une application bancaire web dans le cadre du cours de Technologies Web Avancées, en pratiquant le développement full-stack moderne avec React, TypeScript et Spring Boot.",
-      } as Bil,
-      approach: {
-        en: ["Designed and implemented a RESTful API with Spring Boot and Java", "Built a React frontend with TypeScript for full type-safety", "Implemented user authentication, account management, and transaction history", "Applied clean architecture separating business logic from the UI layer"],
-        fr: ["Conçu et implémenté une API RESTful avec Spring Boot et Java", "Construit un frontend React avec TypeScript pour une sécurité des types complète", "Implémenté l'authentification utilisateur, la gestion des comptes et l'historique des transactions", "Appliqué une architecture propre séparant la logique métier de la couche UI"],
-      } as BilArr,
-      solution: {
-        en: "A functional banking web application with account management, transaction history, and secure user authentication — demonstrating full-stack capability with modern web technologies.",
-        fr: "Une application bancaire web fonctionnelle avec gestion des comptes, historique des transactions et authentification sécurisée — démontrant la capacité full-stack avec les technologies web modernes.",
-      } as Bil,
-      keyOutcome: {
-        en: "Complete full-stack delivery: REST API, typed React frontend, and functional banking features — built in 3 months during an international exchange.",
-        fr: "Livraison full-stack complète : API REST, frontend React typé et fonctionnalités bancaires opérationnelles — construits en 3 mois lors d'un échange international.",
       } as Bil,
       applications: null,
     } as ProjectContent,
@@ -597,6 +562,41 @@ export const projects = [
         fr: ["Analyse des tendances de mortalité liée aux drogues", "Profilage démographique de la consommation", "Comparaison de l'impact des politiques par pays", "Data storytelling avec Power BI"],
       } as BilArr,
       link: "https://github.com/Wabfall/escobaddictions",
+    } as ProjectContent,
+  },
+  {
+    slug: "bank-web-app-uqac",
+    title: { en: "Bank Web App (UQAC)", fr: "Application Bancaire Web (UQAC)" } as Bil,
+    description: {
+      en: "Web application for a fictional bank developed during international exchange at UQAC. Full-stack project with React, TypeScript, and Spring Boot.",
+      fr: "Application web pour une banque fictive développée lors de l'échange international à l'UQAC. Projet full-stack avec React, TypeScript et Spring Boot.",
+    } as Bil,
+    type: { en: "Academic Full-Stack Project", fr: "Projet Académique Full-Stack" } as Bil,
+    date: "Jun 2023",
+    role: { en: "Full-stack developer", fr: "Développeur full-stack" } as Bil,
+    company: "UQAC",
+    categories: ["fullstack"] as ProjectCategory[],
+    tech: ["React", "TypeScript", "Spring Boot"],
+    github: null as string | null,
+    highlight: false,
+    content: {
+      context: {
+        en: "Academic full-stack project at UQAC building a banking web application as part of the Advanced Web Technologies course, practicing modern full-stack development with React, TypeScript, and Spring Boot.",
+        fr: "Projet académique full-stack à l'UQAC construisant une application bancaire web dans le cadre du cours de Technologies Web Avancées, en pratiquant le développement full-stack moderne avec React, TypeScript et Spring Boot.",
+      } as Bil,
+      approach: {
+        en: ["Designed and implemented a RESTful API with Spring Boot and Java", "Built a React frontend with TypeScript for full type-safety", "Implemented user authentication, account management, and transaction history", "Applied clean architecture separating business logic from the UI layer"],
+        fr: ["Conçu et implémenté une API RESTful avec Spring Boot et Java", "Construit un frontend React avec TypeScript pour une sécurité des types complète", "Implémenté l'authentification utilisateur, la gestion des comptes et l'historique des transactions", "Appliqué une architecture propre séparant la logique métier de la couche UI"],
+      } as BilArr,
+      solution: {
+        en: "A functional banking web application with account management, transaction history, and secure user authentication — demonstrating full-stack capability with modern web technologies.",
+        fr: "Une application bancaire web fonctionnelle avec gestion des comptes, historique des transactions et authentification sécurisée — démontrant la capacité full-stack avec les technologies web modernes.",
+      } as Bil,
+      keyOutcome: {
+        en: "Complete full-stack delivery: REST API, typed React frontend, and functional banking features — built in 3 months during an international exchange.",
+        fr: "Livraison full-stack complète : API REST, frontend React typé et fonctionnalités bancaires opérationnelles — construits en 3 mois lors d'un échange international.",
+      } as Bil,
+      applications: null,
     } as ProjectContent,
   },
   {
