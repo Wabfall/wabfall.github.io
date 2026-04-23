@@ -97,7 +97,7 @@ function ProjectCard({ project, featured = false }: { project: (typeof projects)
             <div className={`p-2 rounded-lg ${featured ? "bg-indigo-50 border border-indigo-100" : "bg-slate-50 border border-slate-100"}`}>
               <FolderOpen size={18} className={featured ? "text-indigo-500" : "text-slate-400"} />
             </div>
-            {project.categories.map((c) => {
+            {[...project.categories].sort((a, b) => (a === "data" ? -1 : b === "data" ? 1 : 0)).map((c) => {
               const cfg = projectCategoryConfig(c);
               return cfg ? (
                 <span key={c} className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full border text-[11px] font-semibold ${cfg.badge}`}>
