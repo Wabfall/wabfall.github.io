@@ -287,6 +287,27 @@ export const education = [
   },
 ];
 
+// ─── Certifications ──────────────────────────────────────────────────────────
+
+export const certifications = [
+  {
+    name: "Google Cloud Digital Leader",
+    issuer: "Google Cloud",
+    detail: { en: "Cloud concepts & Google Cloud products for business", fr: "Concepts cloud & produits Google Cloud pour l'entreprise" } as Bil,
+    issued: { en: "Apr 2025", fr: "Avr. 2025" } as Bil,
+    validUntil: { en: "Apr 2028", fr: "Avr. 2028" } as Bil,
+    url: "https://www.credly.com/badges/9ba0c07b-4883-49e3-97df-8664600abe84",
+  },
+  {
+    name: "TOEIC® Listening & Reading — 880/990",
+    issuer: "ETS Global",
+    detail: { en: "Listening 460/495 · Reading 420/495 · CEFR B2", fr: "Compréhension orale 460/495 · écrite 420/495 · CECRL B2" } as Bil,
+    issued: { en: "Jun 2026", fr: "Juin 2026" } as Bil,
+    validUntil: { en: "Jun 2028", fr: "Juin 2028" } as Bil,
+    url: "https://www.etsglobal.org/fr/en/digital-score-report/A8B7A456C601798DD9B56C048B3B14A20422C882528B331F77DA04E8516E28C8eUE4KzkwVm1wWE9QR1lVV2Qrd1JzZW9jZWM1SkdyYnBBdlB0YWtrSlJhaWpwSFZX",
+  },
+];
+
 // ─── Stats ───────────────────────────────────────────────────────────────────
 
 export const stats = [
@@ -766,7 +787,7 @@ export const cvExtra = {
   phone: "+33 6 19 18 49 32",
   languages: [
     { name: { en: "French", fr: "Français" } as Bil, level: { en: "Native", fr: "Natif" } as Bil },
-    { name: { en: "English", fr: "Anglais" } as Bil, level: { en: "B2", fr: "B2" } as Bil },
+    { name: { en: "English", fr: "Anglais" } as Bil, level: { en: "B2 · TOEIC 880/990 (2026)", fr: "B2 · TOEIC 880/990 (2026)" } as Bil },
   ],
   hobbies: [
     {

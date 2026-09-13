@@ -1,8 +1,8 @@
-import { education, type Category } from "../data/portfolio";
+import { education, certifications, type Category } from "../data/portfolio";
 import { useLang } from "../lib/lang";
 import { ui } from "../data/ui";
 import { SectionHeader, categoryConfig } from "./Experience";
-import { GraduationCap, Calendar } from "lucide-react";
+import { GraduationCap, Calendar, Award, ExternalLink } from "lucide-react";
 
 export default function Education() {
   const { lang } = useLang();
@@ -56,6 +56,31 @@ export default function Education() {
               </div>
             );
           })}
+        </div>
+
+        <h3 className="flex items-center gap-2 text-slate-900 font-bold text-xl mt-14 mb-5">
+          <Award size={18} className="text-indigo-500" />
+          {ui.sections.certifications[lang]}
+        </h3>
+
+        <div className="grid sm:grid-cols-2 gap-4">
+          {certifications.map((c) => (
+            <div key={c.name} className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col gap-2">
+              <p className="text-slate-900 font-bold text-sm">{c.name}</p>
+              <p className="text-indigo-600 font-semibold text-xs">{c.issuer}</p>
+              <p className="text-slate-500 text-sm leading-relaxed">{c.detail[lang]}</p>
+              <div className="flex flex-wrap items-center justify-between gap-2 mt-auto pt-2">
+                <span className="flex items-center gap-1.5 text-slate-400 text-xs font-medium">
+                  <Calendar size={11} />
+                  {ui.certifications.issued[lang]} {c.issued[lang]} · {ui.certifications.validUntil[lang]} {c.validUntil[lang]}
+                </span>
+                <a href={c.url} target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600 hover:text-indigo-700">
+                  {ui.certifications.verify[lang]} <ExternalLink size={11} />
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

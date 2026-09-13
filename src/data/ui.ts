@@ -29,6 +29,12 @@ export const ui = {
     education:    { en: "Education",     fr: "Formation"    } as Bil,
     testimonials: { en: "Testimonials",  fr: "Témoignages"  } as Bil,
     posts:        { en: "LinkedIn Posts", fr: "Posts LinkedIn" } as Bil,
+    certifications: { en: "Certifications", fr: "Certifications" } as Bil,
+  },
+  certifications: {
+    issued:     { en: "Issued",        fr: "Obtenue"        } as Bil,
+    validUntil: { en: "valid until",   fr: "valable jusqu'en" } as Bil,
+    verify:     { en: "Verify",        fr: "Vérifier"       } as Bil,
   },
   projects: {
     toolsHubLead:  {
