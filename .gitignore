@@ -32,3 +32,6 @@ CV*.pdf
 
 # Local docs (specs, plans) — kept local only
 docs/
+
+# Ancien dossier de competences (contient le TJM) : jamais dans ce depot public
+/Dossier_competences_*.docx
