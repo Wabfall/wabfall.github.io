@@ -223,6 +223,10 @@ skills = [
     ("TypeScript, React, Next.js", "Confirmé", "papernest (éditeur YAML), Bouygues Telecom"),
     ("Java, Spring Boot", "Opérationnel", "Bouygues Telecom (3 ans), stage Ag2ir"),
     ("APIs LLM, prompt engineering", "Opérationnel", "outils internes papernest"),
+    ("Méthodologie", None, None),
+    ("Scrum (sprints de 2 semaines)", "Opérationnel", "papernest : daily, grooming technique et métier, sprint review"),
+    ("Kanban", "Opérationnel", "Bouygues Telecom (3 ans)"),
+    ("Jira", "Confirmé", "Bouygues Telecom puis papernest, depuis 2022"),
 ]
 st = doc.add_table(rows=1, cols=3)
 borders(st)
@@ -293,7 +297,9 @@ experience(
     "10/2025 – aujourd'hui",
     "Scale-up qui simplifie la gestion des contrats du quotidien (énergie, box internet, assurance) "
     "sur les marchés français, espagnol et italien. Seul Data Engineer sur le site de Barcelone, dans "
-    "une stack data en transition d'un fonctionnement historique vers une plateforme fiable.",
+    "une stack data en transition d'un fonctionnement historique vers une plateforme fiable. "
+    "Organisation Scrum en sprints de deux semaines sous Jira : daily, grooming technique et métier, "
+    "sprint review.",
     [
         ("Moteur ETL et dbt : ", "développement de fonctionnalités sur le moteur ETL interne (Python) et "
          "sur les modèles dbt alimentant BigQuery, avec tests, documentation et CI/CD."),
@@ -310,7 +316,7 @@ experience(
          "trois marchés."),
     ],
     "Python, dbt, BigQuery, SQL, GCP, data contracts, Docker, YAML, Next.js, React, "
-    "TypeScript, Tailwind CSS, Git, CI/CD, APIs LLM.",
+    "TypeScript, Tailwind CSS, Git, CI/CD, APIs LLM, Jira, Scrum.",
 )
 
 experience(
@@ -318,7 +324,8 @@ experience(
     "Nantes, France · Hybride",
     "09/2022 – 08/2025",
     "Alternance de trois ans en parallèle du cycle ingénieur, au sein de l'équipe data d'un opérateur "
-    "télécom national : plateforme interne d'analyse de logs, ETL central et outillage de gouvernance.",
+    "télécom national : plateforme interne d'analyse de logs, ETL central et outillage de gouvernance. "
+    "Organisation en Kanban sous Jira.",
     [
         ("Plateforme d'analyse de logs : ", "développement full-stack d'une application web de "
          "visualisation et d'analyse des logs machines. Temps d'investigation ramené de plusieurs minutes "
@@ -329,7 +336,7 @@ experience(
          "Markdown avec Docusaurus."),
     ],
     "Java, Spring Boot, React, ElasticSearch, MongoDB, Apache Flink (SQL), BigQuery, Teradata, "
-    "Hadoop, Docusaurus, Git.",
+    "Hadoop, Docusaurus, Git, Jira, Kanban.",
 )
 
 experience(
