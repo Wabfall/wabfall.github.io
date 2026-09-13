@@ -4,15 +4,15 @@ import type { Bil, BilArr } from "../lib/lang";
 
 export const personal = {
   name: "Etienne Chevrollier",
-  title: { en: "Data Engineer · DataPlatform Engineer", fr: "Ingénieur Data · DataPlatform Engineer" } as Bil,
+  title: { en: "Data Engineer · Data Platform", fr: "Ingénieur Data · Data Platform" } as Bil,
   subtitle: {
     en: "Building Reliable Data Systems & Internal Tools for Business Teams",
     fr: "Construire des systèmes data fiables et des outils internes pour les équipes métier",
   } as Bil,
   location: "Barcelona, Catalonia, Spain",
   tagline: {
-    en: "Data Engineer with a strong Software Engineering foundation. My strengths lie in understanding systems end-to-end, proposing solutions aligned with real business usage, and simplifying complex processes. From dbt pipelines and data contracts to AI-powered internal tools ➜ I bridge the gap between data infrastructure and the people who use it.",
-    fr: "Ingénieur Data fort d'un solide bagage en génie logiciel, j'accompagne les équipes data et métier dans la transformation d'infrastructures complexes en systèmes robustes et pérennes : des pipelines fiables aux outils internes qui permettent aux parties prenantes d'exploiter la donnée en autonomie. L'ingénierie Data n'est pas un centre de coût, c'est un levier de performance et de croissance.",
+    en: "Data Engineer with a strong software engineering background. I build reliable pipelines (dbt, BigQuery, data contracts) and internal tools, including AI-powered ones, that let business teams work with data on their own. My strength: understanding systems end to end, then simplifying them around how the business actually uses them.",
+    fr: "Ingénieur Data avec un solide bagage en génie logiciel, je conçois des pipelines fiables (dbt, BigQuery, data contracts) et des outils internes, IA comprise, qui rendent les équipes métier autonomes sur la donnée. Ma force : comprendre un système de bout en bout pour le simplifier et l'aligner sur les usages réels du métier.",
   } as Bil,
   badge: { en: "Google Cloud Certified", fr: "Certifié Google Cloud" } as Bil,
   email: "etiennechevrollier@gmail.com",
