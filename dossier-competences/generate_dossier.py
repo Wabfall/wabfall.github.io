@@ -171,7 +171,7 @@ facts = [
     ("Mobilité", "Grand Ouest en priorité, ouvert sur toute la France"),
     ("Mode de travail", "Hybride ou full remote, présentiel possible"),
     ("Langues", "Français natif · Anglais professionnel (TOEIC 880/990)"),
-    ("Certification", "Google Cloud Digital Leader · Professional Data Engineer en préparation"),
+    ("Certification", "Google Cloud Digital Leader"),
 ]
 ft = doc.add_table(rows=len(facts), cols=2)
 borders(ft)
@@ -200,9 +200,9 @@ bullet("data contracts, validation de schéma, tests dbt et alerting pour détec
        lead="Fiabilité de la donnée : ")
 bullet("seul Data Engineer sur site, interlocuteur direct des équipes Sales Ops et Partnership sur trois marchés.",
        lead="Autonomie et relation métier : ")
-bullet("éditeur de configuration YAML qui a réduit de ~50 % le temps de fabrication des pipelines et fait passer "
-       "l'investigation d'incidents de 30–60 min à moins de 2 min.",
-       lead="Résultats mesurés : ")
+bullet("conception d'outils internes pensés pour les usages réels des équipes, techniques ou non : éditeur "
+       "de configuration des pipelines, outils à base de LLM.",
+       lead="Outillage au service des métiers : ")
 
 # ─── Compétences ────────────────────────────────────────────────────────────
 section_title("Compétences techniques")
@@ -212,16 +212,16 @@ skills = [
     ("dbt (modélisation, tests, documentation)", "Confirmé", "papernest, au quotidien"),
     ("Python (moteur ETL, outillage)", "Confirmé", "papernest, au quotidien"),
     ("Data contracts, validation de schéma, alerting", "Confirmé", "papernest"),
-    ("Apache Flink SQL (streaming)", "Opérationnel", "Bouygues Telecom, 3 ans"),
+    ("Apache Flink SQL (streaming)", "Opérationnel", "Bouygues Telecom (3 ans) puis papernest (1 an)"),
     ("Teradata, Hadoop", "Opérationnel", "Bouygues Telecom, scripts de gouvernance"),
     ("ElasticSearch, MongoDB", "Opérationnel", "Bouygues Telecom, plateforme d'analyse de logs"),
     ("Cloud et DevOps", None, None),
     ("Google Cloud Platform", "Opérationnel", "BigQuery en production · certifié Cloud Digital Leader"),
-    ("Git, CI/CD, GitHub Actions", "Confirmé", "missions et projets personnels"),
-    ("Docker, Linux, Caddy", "Opérationnel", "services auto-hébergés sur VPS"),
+    ("Git, CI/CD, GitHub Actions", "Confirmé", "Bouygues Telecom puis papernest, depuis 2022"),
+    ("Docker, Linux", "Opérationnel", "papernest · services auto-hébergés sur VPS"),
     ("Développement et IA", None, None),
     ("TypeScript, React, Next.js", "Confirmé", "papernest (éditeur YAML), Bouygues Telecom"),
-    ("Java, Spring Boot", "Opérationnel", "Bouygues Telecom, stage Ag2ir"),
+    ("Java, Spring Boot", "Opérationnel", "Bouygues Telecom (3 ans), stage Ag2ir"),
     ("APIs LLM, prompt engineering", "Opérationnel", "outils internes papernest"),
 ]
 st = doc.add_table(rows=1, cols=3)
@@ -300,16 +300,17 @@ experience(
         ("Qualité de la donnée : ", "mise en place de data contracts et de validation de schéma pour "
          "détecter les anomalies avant qu'elles n'atteignent les usages aval."),
         ("Supervision : ", "processus d'alerting sur les pipelines pour une détection proactive des incidents."),
-        ("Éditeur de configuration YAML : ", "conception et développement d'un outil (Next.js, React) "
-         "permettant de configurer les flux sans risque. Temps de fabrication et de test des pipelines "
-         "réduit de ~50 %, investigation d'incidents ramenée de 30–60 min à moins de 2 min."),
+        ("Éditeur de configuration YAML : ", "conception et développement d'un outil (Next.js, React) qui "
+         "sécurise la configuration des flux, y compris pour les équipes non techniques. Le temps de "
+         "fabrication et de test d'un pipeline a été divisé par deux environ, et l'investigation d'un "
+         "incident est passée de 30 à 60 minutes à moins de 2 minutes."),
         ("Outils IA : ", "outils internes à base de LLM pour accélérer les workflows des équipes techniques "
          "et non techniques."),
         ("Rôle transverse : ", "interlocuteur data principal des équipes Sales Ops et Partnership sur les "
          "trois marchés."),
     ],
-    "Python, dbt, BigQuery, SQL, GCP, data contracts, YAML, Next.js, React, TypeScript, "
-    "Tailwind CSS, Git, CI/CD, APIs LLM.",
+    "Python, dbt, BigQuery, SQL, Apache Flink, GCP, data contracts, Docker, YAML, Next.js, React, "
+    "TypeScript, Tailwind CSS, Git, CI/CD, APIs LLM.",
 )
 
 experience(
@@ -353,7 +354,6 @@ edu = [
     ("2020 – 2022", "DUT Informatique, IUT du Havre."),
     ("2026", "TOEIC Listening & Reading : 880/990 (niveau B2)."),
     ("2025", "Google Cloud Digital Leader (valide jusqu'en 2028)."),
-    ("En cours", "Google Cloud Professional Data Engineer, en préparation."),
 ]
 et = doc.add_table(rows=len(edu), cols=2)
 borders(et, inside=False, color="FFFFFF")
@@ -367,15 +367,6 @@ set_widths(et, (Cm(2.6), Cm(14.8)))
 section_title("Langues")
 bullet("langue maternelle.", lead="Français : ")
 bullet("professionnel, langue de travail au quotidien chez papernest (TOEIC 880/990).", lead="Anglais : ")
-bullet("notions, en cours d'apprentissage.", lead="Espagnol : ")
-
-section_title("Projets personnels")
-bullet("API Node.js de génération d'images de posts LinkedIn, en production sur un VPS personnel "
-       "(Docker, reverse proxy Caddy, déploiement par GitHub Actions).",
-       lead="Outils en ligne : ")
-bullet("administration d'un VPS Linux hébergeant plusieurs services, avec DNS, TLS et configuration "
-       "versionnée sous Git.",
-       lead="Auto-hébergement : ")
 
 # ─── Pied de page ───────────────────────────────────────────────────────────
 fp = sec.footer.paragraphs[0]
