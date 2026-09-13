@@ -787,7 +787,7 @@ export const cvExtra = {
   phone: "+33 6 19 18 49 32",
   languages: [
     { name: { en: "French", fr: "Français" } as Bil, level: { en: "Native", fr: "Natif" } as Bil },
-    { name: { en: "English", fr: "Anglais" } as Bil, level: { en: "B2 · TOEIC 880/990 (2026)", fr: "B2 · TOEIC 880/990 (2026)" } as Bil },
+    { name: { en: "English", fr: "Anglais" } as Bil, level: { en: "B2 · TOEIC 880/990", fr: "B2 · TOEIC 880/990" } as Bil },
   ],
   hobbies: [
     {
