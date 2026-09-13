@@ -212,13 +212,13 @@ skills = [
     ("dbt (modélisation, tests, documentation)", "Confirmé", "papernest, au quotidien"),
     ("Python (moteur ETL, outillage)", "Confirmé", "papernest, au quotidien"),
     ("Data contracts, validation de schéma, alerting", "Confirmé", "papernest"),
-    ("Apache Flink SQL (streaming)", "Opérationnel", "Bouygues Telecom (3 ans) puis papernest (1 an)"),
+    ("Apache Flink SQL (streaming)", "Opérationnel", "Bouygues Telecom (1 an)"),
     ("Teradata, Hadoop", "Opérationnel", "Bouygues Telecom, scripts de gouvernance"),
     ("ElasticSearch, MongoDB", "Opérationnel", "Bouygues Telecom, plateforme d'analyse de logs"),
     ("Cloud et DevOps", None, None),
     ("Google Cloud Platform", "Opérationnel", "BigQuery en production · certifié Cloud Digital Leader"),
     ("Git, CI/CD, GitHub Actions", "Confirmé", "Bouygues Telecom puis papernest, depuis 2022"),
-    ("Docker, Linux", "Opérationnel", "papernest · services auto-hébergés sur VPS"),
+    ("Docker, Linux", "Opérationnel", "papernest (1 an) · services auto-hébergés sur VPS"),
     ("Développement et IA", None, None),
     ("TypeScript, React, Next.js", "Confirmé", "papernest (éditeur YAML), Bouygues Telecom"),
     ("Java, Spring Boot", "Opérationnel", "Bouygues Telecom (3 ans), stage Ag2ir"),
@@ -309,7 +309,7 @@ experience(
         ("Rôle transverse : ", "interlocuteur data principal des équipes Sales Ops et Partnership sur les "
          "trois marchés."),
     ],
-    "Python, dbt, BigQuery, SQL, Apache Flink, GCP, data contracts, Docker, YAML, Next.js, React, "
+    "Python, dbt, BigQuery, SQL, GCP, data contracts, Docker, YAML, Next.js, React, "
     "TypeScript, Tailwind CSS, Git, CI/CD, APIs LLM.",
 )
 
